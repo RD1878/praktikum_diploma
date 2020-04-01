@@ -1,6 +1,2 @@
 @import url(./vendor/normalize.css);
 @import url(./vendor/fonts.css);
-
-h1 {
-    color: green;
-}
