@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Сервис для анализа происходящих в мире событий">
+  <meta name="author" content="Павел Хохлов">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NewsAnalyzer</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
@@ -11,22 +13,22 @@
   <div class="root">
     <header class="header">
       <div class="header__content">
-        <h4 class="header__logo">NewsAnalyzer</h4>
+        <h4 class="headline header__logo">NewsAnalyzer</h4>
         <nav class="header__nav">
-          <a class="link header__link" href="#">Главная</a>
-          <a class="link header__link" href="#">О проекте</a>
+          <a class="link header__link_type_load header__link" href="#">Главная</a>
+          <a class="link header__link_type_expect header__link" href="#">О проекте</a>
         </nav>
       </div>
     </header>
     <main class="content">
       <section class="lead">
-        <h1 class="lead__title">Что в мире творится?</h1>
+        <img class="lead__image" src="/src/images/georgia-de-lotz--UsJoNxLaNo-unsplash.png">
+        <h1 class="headline lead__title">Что в мире<br>творится?</h1>
         <p class="lead__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
         <div class="lead__search">
           <form class="lead__form" name="search">
             <input type="text" name="theme" class="lead__input lead__input_type_theme" placeholder="Введите тему новости">
-            <span class="lead__error-message"></span>
-            <button type class="button lead__button" disabled>Искать</button>
+            <button type class="button lead__button">Искать</button>
         </form>
         </div>
       </section>
@@ -36,62 +38,74 @@
           <p class="news__find-text">Идет поиск новостей...</p>
         </div>
         <div class="news__out">
-          <img class="news__out-image" alt="Не найдено" src="<%=require('./images/not-found_v1.png').default%>">
-          <h4 class="news__out-title">Ничего не найдено</h4>
-          <p class="news__out-subtitle">К сожалению по вашему запросу ничего не найдено.</p>
+          <img class="news__out_image" alt="Не найдено" src="<%=require('./images/not-found_v1.png').default%>">
+          <h4 class="headline news__out_title">Ничего не найдено</h4>
+          <p class="news__out_subtitle">К сожалению по вашему запросу ничего не найдено.</p>
         </div>
         <div class="news__data">
           <div class="news__head">
-            <h3 class="news__title">Результаты поиска</h3>
+            <h3 class="headline news__title">Результаты поиска</h3>
             <a class="link news__analytics" href="#">
-              <p class="news__analytics-text">Посмотреть аналитику</p>
-              <img class="news__analytics-image" alt="Стрелка" src="<%=require('./images/Strelka.png').default%>">
+              <p class="news__analytics_text">Посмотреть аналитику</p>
+              <img class="news__analytics_image" alt="Стрелка" src="<%=require('./images/Strelka.png').default%>">
             </a>
           </div>
           <div class="news__container">
             <div class="news__item">
-              <img class="news__item-image" alt="Image" src="<%=require('./images/image_08.png').default%>">
-              <time class="news__item-date">2 августа, 2019</time>
-              <h4 class="news__item-title">Национальное достояние – парки</h4>
-              <p class="news__item-subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-              <a class="link news__item-source" href="#"><img class="news__item_source_image" alt="Лента" src="<%=require('./images/Лента.ру.png').default%>"></a>
+              <img class="news__item_image" alt="Image" src="<%=require('./images/image_08.png').default%>">
+              <div class="news__item_content">
+                <time class="date news__item_date">2 августа, 2019</time>
+                <h4 class="headline news__item_title">Национальное достояние – парки</h4>
+                <p class="news__item_subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                <a class="link news__item_source" href="#">Лента</a>
+              </div>
             </div>
             <div class="news__item">
-              <img class="news__item-image" alt="Image" src="<%=require('./images/image_04.png').default%>">
-              <time class="news__item-date">2 августа, 2019</time>
-              <h4 class="news__item-title">Лесные огоньки: история одной фотографии</h4>
-              <p class="news__item-subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-              <a class="link news__item-source" href="#"><img class="news__item_source_image" alt="Медуза" src="<%=require('./images/Медуза.png').default%>"></a>
+              <img class="news__item_image" alt="Image" src="<%=require('./images/image_04.png').default%>">
+              <div class="news__item_content">
+                <time class="date news__item_date">2 августа, 2019</time>
+                <h4 class="headline news__item_title">Лесные огоньки: история одной фотографии</h4>
+                <p class="news__item_subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                <a class="link news__item_source" href="#">Медуза</a>
+              </div>
             </div>
             <div class="news__item">
-              <img class="news__item-image" alt="Image" src="<%=require('./images/image_07.png').default%>">
-              <time class="news__item-date">2 августа, 2019</time>
-              <h4 class="news__item-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
-              <p class="news__item-subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-              <a class="link news__item-source" href="#"><img class="news__item_source_image" alt="РИА" src="<%=require('./images/Риа.png').default%>"></a>
+              <img class="news__item_image" alt="Image" src="<%=require('./images/image_07.png').default%>">
+              <div class="news__item_content">
+                <time class="date news__item_date">2 августа, 2019</time>
+                <h4 class="headline news__item_title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
+                <p class="news__item_subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                <a class="link news__item_source" href="#">РИА</a>
+              </div>
             </div>
           </div>
           <div class="news__container">
             <div class="news__item">
-              <img class="news__item-image" alt="Image" src="<%=require('./images/image_06.png').default%>">
-              <time class="news__item-date">2 августа, 2019</time>
-              <h4 class="news__item-title">Национальное достояние – парки</h4>
-              <p class="news__item-subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-              <a class="link news__item-source" href="#"><img class="news__item_source_image" alt="Дзен" src="<%=require('./images/Дзен.png').default%>"></a>
+              <img class="news__item_image" alt="Image" src="<%=require('./images/image_06.png').default%>">
+              <div class="news__item_content">
+                <time class="date news__item_date">2 августа, 2019</time>
+                <h4 class="headline news__item_title">Национальное достояние – парки</h4>
+                <p class="news__item_subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                <a class="link news__item_source" href="#">Дзен</a>
+              </div>
             </div>
             <div class="news__item">
-              <img class="news__item-image" alt="Image" src="<%=require('./images/image_01.png').default%>">
-              <time class="news__item-date">2 августа, 2019</time>
-              <h4 class="news__item-title">Лесные огоньки: история одной фотографии</h4>
-              <p class="news__item-subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-              <a class="link news__item-source" href="#"><img class="news__item_source_image" alt="Афиша" src="<%=require('./images/Афиша.png').default%>"></a>
+              <img class="news__item_image" alt="Image" src="<%=require('./images/image_01.png').default%>">
+              <div class="news__item_content">
+                <time class="date news__item_date">2 августа, 2019</time>
+                <h4 class="headline news__item_title">Лесные огоньки: история одной фотографии</h4>
+                <p class="news__item_subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                <a class="link news__item_source" href="#">Афиша</a>
+              </div>
             </div>
             <div class="news__item">
-              <img class="news__item-image" alt="Image" src="<%=require('./images/image_05.png').default%>">
-              <time class="news__item-date">2 августа, 2019</time>
-              <h4 class="news__item-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
-              <p class="news__item-subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-              <a class="link news__item-source" href="#"><img class="news__item_source_image" alt="Медиазона" src="<%=require('./images/Медиазона.png').default%>"></a>
+              <img class="news__item_image" alt="Image" src="<%=require('./images/image_05.png').default%>">
+              <div class="news__item_content">
+                <time class="date news__item_date">2 августа, 2019</time>
+                <h4 class="headline news__item_title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
+                <p class="news__item_subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                <a class="link news__item_source" href="#">Медиазона</a>
+              </div>
             </div>
           </div>
           <button class="button news__button news__button_active">Показать еще</button>
@@ -100,23 +114,21 @@
       <section class="author">
         <img class="author__photo" alt="Author Photo" src="<%=require('./images/image-03.png').default%>">
         <div class="author__info">
-          <h3 class="author__info-title">Об авторе</h3>
-          <p class="author__info-subtitle">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.  Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+          <h3 class="headline author__info_title">Об авторе</h3>
+          <p class="author__info_subtitle">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.  Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <footer class="footer__logo">&copy; 2020. Хохлов Павел</footer>
-      <div class="footer__content">
-        <nav class="footer__nav">
-          <a class="link footer__nav-item" href="#">Главная</a>
-          <a class="link footer__nav-item" href="#">О проекте</a>
-          <a class="link footer__nav-item" href="#">Яндекс.Практикум</a>
-        </nav>
-        <ul class="footer__links">
-          <li><a href="https://www.github.com" class="link footer__links-item"><img src="<%=require('./images/gh.png').default%>" alt="github" class="footer__links_image"></a></li>
-          <li><a href="https://www.facebook.com" class="link footer__links-item"><img src="<%=require('./images/fb.png').default%>" alt="facebook" class="footer__links_image"></a></li>
-        </ul>
+      <p class="footer__logo">&copy; 2020. Хохлов Павел</p>
+      <nav class="footer__nav">
+        <a class="link footer__nav_item" href="#">Главная</a>
+        <a class="link footer__nav_item" href="#">О проекте</a>
+        <a class="link footer__nav_item" href="#">Яндекс.Практикум</a>
+      </nav>
+      <div class="footer__links">
+        <a href="https://www.github.com" class="link footer__links_item"><img src="<%=require('./images/gh.png').default%>" alt="github" class="footer__links_image"></a>
+        <a href="https://www.facebook.com" class="link footer__links_item"><img src="<%=require('./images/fb.png').default%>" alt="facebook" class="footer__links_image"></a>
       </div>
     </footer>
   </div>

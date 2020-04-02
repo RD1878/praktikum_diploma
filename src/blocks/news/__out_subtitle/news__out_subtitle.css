@@ -1,0 +1,10 @@
+.news__out_subtitle {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}

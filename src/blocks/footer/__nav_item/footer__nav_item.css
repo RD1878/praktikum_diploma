@@ -1,0 +1,12 @@
+.footer__nav_item {
+  margin-right: 46px;
+
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #1A1B22;
+}
+
+.footer__nav_item:last-of-type {
+  margin-right: 0;
+}

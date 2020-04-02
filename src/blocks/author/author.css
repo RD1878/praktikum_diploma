@@ -1,9 +1,15 @@
-@import url(./__info-title/author__info-title.css);
+@import url(./__info_title/author__info_title.css);
 @import url(./__info/author__info.css);
 @import url(./__photo/author__photo.css);
-@import url(./__info-subtitle/author__info-subtitle.css);
+@import url(./__info_subtitle/author__info_subtitle.css);
 
 
 .author {
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  margin-left: 104px;
+  margin-right: 216px;
 }

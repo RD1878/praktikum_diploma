@@ -1,3 +1,7 @@
 .news__analytics {
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 223px;
+  align-items: center;
 }

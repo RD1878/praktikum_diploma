@@ -1,5 +1,21 @@
 @import url(./_active/news__button_active.css);
 
 .news__button {
+  margin: 48px auto 0 auto;
+  min-width: 288px;
+  min-height: 64px;
 
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #1A1B22;
+
+  background-color: #FFF;
+  border-radius: 80px;
+  border: 0;
+}
+
+.news__button:hover {
+  opacity: 0.9;
 }

@@ -1,10 +1,16 @@
-@import url(./__content/footer__content.css);
-@import url(./__links-item/footer__links-item.css);
+@import url(./__links_item/footer__links_item.css);
 @import url(./__links/footer__links.css);
 @import url(./__logo/footer__logo.css);
-@import url(./__nav-item/footer__nav-item.css);
+@import url(./__nav_item/footer__nav_item.css);
 @import url(./__nav/footer__nav.css);
+@import url(./__links_image/footer__links_image.css);
 
 .footer {
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 105px;
+  margin-right: 105px;
+  margin-bottom: 25px;
+  align-items: center;
 }

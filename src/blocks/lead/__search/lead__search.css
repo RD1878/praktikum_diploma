@@ -1,3 +1,9 @@
 .lead__search {
+  max-width: 608px;
+  max-height: 64px;
+
+  position: absolute;
+  top: 76%;
+  left: 29%;
 
 }

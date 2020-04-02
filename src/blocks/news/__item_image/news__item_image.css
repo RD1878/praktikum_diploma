@@ -1,0 +1,5 @@
+.news__item_image {
+  width: 100%;
+  margin-top: 0;
+  object-fit: fill;
+}

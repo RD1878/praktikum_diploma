@@ -11,3 +11,5 @@
 @import url(./blocks/link/link.css);
 @import url(./blocks/news/news.css);
 @import url(./blocks/root/root.css);
+@import url(./blocks/headline/headline.css);
+@import url(./blocks/date/date.css);
