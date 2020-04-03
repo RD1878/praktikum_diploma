@@ -1,0 +1,14 @@
+@import url(./__title/api-block__title.css);
+@import url(./__link_text/api-block__link_text.css);
+@import url(./__link_image/api-block__link_image.css);
+@import url(./__link/api-block-link.css);
+@import url(./__head/api-block__head.css);
+
+.api-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: 104px;
+  margin-right: 104px;
+}

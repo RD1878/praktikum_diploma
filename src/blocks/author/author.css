@@ -10,6 +10,7 @@
   justify-content: space-between;
   padding-bottom: 80px;
   padding-top: 80px;
-  margin-left: 104px;
-  margin-right: 216px;
+  padding-left: 104px;
+  padding-right: 216px;
+  background-color: #FFF;
 }

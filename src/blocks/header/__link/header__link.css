@@ -1,5 +1,7 @@
-@import url(./_type/header__link_type_load.css);
+@import url(./_type/header__link_type_load-about.css);
+@import url(./_type/header__link_type_load-home.css);
 @import url(./_type/header__link_type_expect.css);
+
 
 .header__link {
   font-weight: 500;
@@ -11,8 +13,4 @@
 
 .header__link:last-of-type {
   margin-right: 0;
-}
-
-.header__link:hover {
-  color: #FFF;
 }

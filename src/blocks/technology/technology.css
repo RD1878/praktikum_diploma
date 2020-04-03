@@ -1,0 +1,11 @@
+@import url(./__title/technology__title.css);
+@import url(./__item_title/technology__item_title.css);
+@import url(./__item_pic/technology__item_pic.css);
+@import url(./__item/technology__item.css);
+@import url(./__container/technology__container.css);
+
+.technology {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

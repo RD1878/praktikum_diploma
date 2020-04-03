@@ -1,0 +1,12 @@
+@import url(./__title/info__title.css);
+@import url(./__subtitle/info__subtitle.css);
+@import url(./__subtitle_paragraph/info__subtitle_paragraph.css);
+
+.info {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  max-height: 702px;
+  padding-bottom: 94px;
+}

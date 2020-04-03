@@ -1,11 +1,5 @@
 .news__data {
-  display: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /*display: none;*/
   padding-top: 80px;
   padding-bottom: 80px;
-  margin: auto;
-
-  width: calc(100% - 208px);
 }

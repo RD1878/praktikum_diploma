@@ -1,0 +1,12 @@
+.technology__title {
+  margin-top: 80px;
+  margin-left: 104px;
+  max-width: 344px;
+  height: fit-content;
+
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+}

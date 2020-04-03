@@ -1,0 +1,11 @@
+@import url(./__head/commits__head.css);
+@import url(./__link/commits__link.css);
+@import url(./__link_image/commits__link_image.css);
+@import url(./__link_text/commits__link_text.css);
+@import url(./__title/commits__title.css);
+
+.commits {
+  padding-top: 72px;
+  padding-bottom: 80px;
+  max-height: 606px;
+}

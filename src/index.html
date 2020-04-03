@@ -6,17 +6,19 @@
   <meta name="description" content="Сервис для анализа происходящих в мире событий">
   <meta name="author" content="Павел Хохлов">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>NewsAnalyzer</title>
+  <title>NewsAnalyzer. Главная</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+  <link rel="icon" href="<%=require('./images/faviconka_ru_1119.png').default%>" type="image/x-icon" />
+  <link rel="shortcut icon" href="<%=require('./images/faviconka_ru_1119.png').default%>" type="image/x-icon" />
 </head>
 <body>
   <div class="root">
-    <header class="header">
+    <header class="header header_type_home">
       <div class="header__content">
-        <h4 class="headline header__logo">NewsAnalyzer</h4>
+        <h4 class="headline header__logo header__logo_type_home">NewsAnalyzer</h4>
         <nav class="header__nav">
-          <a class="link header__link_type_load header__link" href="#">Главная</a>
-          <a class="link header__link_type_expect header__link" href="#">О проекте</a>
+          <a class="link header__link_type_load-home header__link" href="index.html">Главная</a>
+          <a class="link header__link_type_expect header__link" href="about.html">О проекте</a>
         </nav>
       </div>
     </header>
@@ -42,12 +44,12 @@
           <h4 class="headline news__out_title">Ничего не найдено</h4>
           <p class="news__out_subtitle">К сожалению по вашему запросу ничего не найдено.</p>
         </div>
-        <div class="news__data">
-          <div class="news__head">
-            <h3 class="headline news__title">Результаты поиска</h3>
-            <a class="link news__analytics" href="#">
-              <p class="news__analytics_text">Посмотреть аналитику</p>
-              <img class="news__analytics_image" alt="Стрелка" src="<%=require('./images/Strelka.png').default%>">
+        <div class="news__data api-block">
+          <div class="news__head api-block__head">
+            <h3 class="headline news__title api-block__title">Результаты поиска</h3>
+            <a class="link news__analytics api-block__link" href="#">
+              <p class="news__analytics_text api-block__link_text">Посмотреть аналитику</p>
+              <img class="news__analytics_image api-block__link_image" alt="Стрелка" src="<%=require('./images/Strelka.png').default%>">
             </a>
           </div>
           <div class="news__container">
