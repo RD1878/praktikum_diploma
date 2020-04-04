@@ -1,0 +1,15 @@
+.analytics-graph__subtitle {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  margin-top: 50px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #1A1B22;
+
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+}

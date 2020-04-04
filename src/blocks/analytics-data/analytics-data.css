@@ -1,0 +1,13 @@
+@import url(./__title/analytics-data__title.css);
+@import url(./__news/analytics-data__news.css);
+@import url(./__mentions/analytics-data__mentions.css);
+@import url(./__mark/analytics-data__mark.css);
+@import url(./__news_item/analytics-data__news_item.css);
+
+.analytics-data {
+  background-color: #FFF;
+  max-height: 270px;
+  padding-top: 32px;
+  padding-left: 104px;
+  padding-bottom: 80px;
+}

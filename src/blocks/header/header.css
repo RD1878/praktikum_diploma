@@ -1,16 +1,15 @@
 @import url(./__content/header__content.css);
 @import url(./__link/header__link.css);
+@import url(./__link_underline/header__link_underline.css);
 @import url(./__logo/header__logo.css);
 @import url(./__nav/header__nav.css);
-@import url(./_type/header_type_about.css);
-@import url(./_type/header_type_home.css);
+@import url(./__nav_item/header__nav_item.css);
+@import url(./_type/header_type_light.css);
+@import url(./_type/header_type_dark.css);
 
 .header {
   max-height: 80px;
   width: 100%;
   padding-top: 2%;
-  padding-bottom: 2%;
-
-
-  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+  /*padding-bottom: 2%;*/
 }

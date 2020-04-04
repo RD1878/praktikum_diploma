@@ -1,0 +1,7 @@
+.header__link_type_expect-light {
+  color: #B6BCBF;
+}
+
+.header__link_type_expect-light:hover {
+  color: #FFF;
+}

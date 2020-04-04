@@ -1,5 +1,5 @@
-@import url(./_type/header__logo_type_about.css);
-@import url(./_type/header__logo_type_home.css);
+@import url(./_type/header__logo_type_dark.css);
+@import url(./_type/header__logo_type_light.css);
 
 .header__logo {
   font-weight: bold;

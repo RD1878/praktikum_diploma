@@ -13,28 +13,33 @@
 </head>
 <body>
   <div class="root">
-    <header class="header header_type_about">
+    <header class="header header_type_light">
       <div class="header__content">
-        <h4 class="headline header__logo header__logo_type_about">NewsAnalyzer</h4>
+        <h4 class="headline header__logo header__logo_type_dark">NewsAnalyzer</h4>
         <nav class="header__nav">
-          <a class="link header__link_type_expect header__link" href="index.html">Главная</a>
-          <a class="link header__link_type_load-about header__link" href="about.html">О проекте</a>
+          <div class="header__nav_item">
+            <a class="link header__link_type_expect-dark header__link" href="index.html">Главная</a>
+          </div>
+          <div class="header__nav_item">
+            <a class="link header__link_type_active-dark header__link" href="about.html">О проекте</a>
+            <div class="header__link_underline header__link_underline_type_dark"></div>
+          </div>
         </nav>
       </div>
     </header>
     <main class="content">
       <section class="info">
         <h3 class="headline info__title">Клиентам</h3>
-        <div class="info__subtitle">
+        <article class="info__subtitle">
           <p class="info__subtitle_paragraph">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.</p>
           <p class="info__subtitle_paragraph">Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
           <p class="info__subtitle_paragraph">Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.</p>
           <p class="info__subtitle_paragraph">При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем, у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает.</p>
           <p class="info__subtitle_paragraph">Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
-        </div>
+        </article>
       </section>
       <section class="technology">
-        <h3 class="technology__title">Используемые технологии</h3>
+        <h3 class="headline technology__title">Используемые технологии</h3>
         <div class="technology__container">
           <div class="technology__item">
             <h5 class="headline technology__item_title">HTML</h5>
@@ -58,13 +63,13 @@
         <img class="author__photo" alt="Author Photo" src="<%=require('../images/image-03.png').default%>">
         <div class="author__info">
           <h3 class="headline author__info_title">Об авторе</h3>
-          <p class="author__info_subtitle">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.  Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+          <article class="author__info_subtitle">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.  Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</article>
         </div>
       </section>
       <section class="commits api-block">
         <div class="commits__head api-block__head">
           <h3 class="headline commits__title api-block__title">История коммитов из Github</h3>
-          <a class="link commits__link api-block__link" href="#">
+          <a class="link commits__link api-block__link" href="https://github.com/RD1878/praktikum_diploma/commits/master">
             <p class="commits__link_text api-block__link_text">Открыть в Github</p>
             <img class="commits__link_image api-block__link_image" alt="Стрелка" src="<%=require('../images/Strelka.png').default%>">
           </a>
@@ -117,13 +122,13 @@
     <footer class="footer">
       <p class="footer__logo">&copy; 2020. Хохлов Павел</p>
       <nav class="footer__nav">
-        <a class="link footer__nav_item" href="#">Главная</a>
-        <a class="link footer__nav_item" href="#">О проекте</a>
-        <a class="link footer__nav_item" href="#">Яндекс.Практикум</a>
+        <a class="link footer__nav_item" href="index.html">Главная</a>
+        <a class="link footer__nav_item" href="about.html">О проекте</a>
+        <a class="link footer__nav_item" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
       </nav>
       <div class="footer__links">
-        <a href="https://www.github.com" class="link footer__links_item"><img src="<%=require('../images/gh.png').default%>" alt="github" class="footer__links_image"></a>
-        <a href="https://www.facebook.com" class="link footer__links_item"><img src="<%=require('../images/fb.png').default%>" alt="facebook" class="footer__links_image"></a>
+        <a href="https://github.com/RD1878" class="link footer__links_item"><img src="<%=require('../images/gh.png').default%>" alt="github" class="footer__links_image"></a>
+        <a href="https://www.facebook.com/profile.php?id=100001548766863" class="link footer__links_item"><img src="<%=require('../images/fb.png').default%>" alt="facebook" class="footer__links_image"></a>
       </div>
     </footer>
   </div>

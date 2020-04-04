@@ -7,7 +7,7 @@
 @import url(./__image/lead__image.css);
 
 .lead {
-  width: 100%;
+  /*width: 100%;*/
   max-height: 576px;
   position: relative;
 }

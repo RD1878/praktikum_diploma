@@ -13,12 +13,17 @@
 </head>
 <body>
   <div class="root">
-    <header class="header header_type_home">
+    <header class="header header_type_dark">
       <div class="header__content">
-        <h4 class="headline header__logo header__logo_type_home">NewsAnalyzer</h4>
+        <h4 class="headline header__logo header__logo_type_light">NewsAnalyzer</h4>
         <nav class="header__nav">
-          <a class="link header__link_type_load-home header__link" href="index.html">Главная</a>
-          <a class="link header__link_type_expect header__link" href="about.html">О проекте</a>
+          <div class="header__nav_item">
+            <a class="link header__link_type_active-light header__link" href="index.html">Главная</a>
+            <div class="header__link_underline header__link_underline_type_light"></div>
+          </div>
+          <div class="header__nav_item">
+            <a class="link header__link_type_expect-light header__link" href="about.html">О проекте</a>
+          </div>
         </nav>
       </div>
     </header>
@@ -47,7 +52,7 @@
         <div class="news__data api-block">
           <div class="news__head api-block__head">
             <h3 class="headline news__title api-block__title">Результаты поиска</h3>
-            <a class="link news__analytics api-block__link" href="#">
+            <a class="link news__analytics api-block__link" href="analytics.html">
               <p class="news__analytics_text api-block__link_text">Посмотреть аналитику</p>
               <img class="news__analytics_image api-block__link_image" alt="Стрелка" src="<%=require('./images/Strelka.png').default%>">
             </a>
@@ -117,20 +122,20 @@
         <img class="author__photo" alt="Author Photo" src="<%=require('./images/image-03.png').default%>">
         <div class="author__info">
           <h3 class="headline author__info_title">Об авторе</h3>
-          <p class="author__info_subtitle">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.  Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+          <article class="author__info_subtitle">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.  Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</article>
         </div>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__logo">&copy; 2020. Хохлов Павел</p>
       <nav class="footer__nav">
-        <a class="link footer__nav_item" href="#">Главная</a>
-        <a class="link footer__nav_item" href="#">О проекте</a>
-        <a class="link footer__nav_item" href="#">Яндекс.Практикум</a>
+        <a class="link footer__nav_item" href="index.html">Главная</a>
+        <a class="link footer__nav_item" href="about.html">О проекте</a>
+        <a class="link footer__nav_item" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
       </nav>
       <div class="footer__links">
-        <a href="https://www.github.com" class="link footer__links_item"><img src="<%=require('./images/gh.png').default%>" alt="github" class="footer__links_image"></a>
-        <a href="https://www.facebook.com" class="link footer__links_item"><img src="<%=require('./images/fb.png').default%>" alt="facebook" class="footer__links_image"></a>
+        <a href="https://github.com/RD1878" class="link footer__links_item"><img src="<%=require('./images/gh.png').default%>" alt="github" class="footer__links_image"></a>
+        <a href="https://www.facebook.com/profile.php?id=100001548766863" class="link footer__links_item"><img src="<%=require('./images/fb.png').default%>" alt="facebook" class="footer__links_image"></a>
       </div>
     </footer>
   </div>

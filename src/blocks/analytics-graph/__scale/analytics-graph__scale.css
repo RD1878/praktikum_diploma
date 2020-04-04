@@ -1,0 +1,15 @@
+@import url(./_type/analytics-graph__scale_type_bottom.css);
+@import url(./_type/analytics-graph__scale_type_top.css);
+
+.analytics-graph__scale {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 104px;
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+}

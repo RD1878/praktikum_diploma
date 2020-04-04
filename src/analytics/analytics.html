@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Сервис для анализа происходящих в мире событий">
+  <meta name="author" content="Павел Хохлов">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NewsAnalyzer. Аналитика событий за неделю</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+  <link rel="icon" href="<%=require('../images/faviconka_ru_1119.png').default%>" type="image/x-icon" />
+  <link rel="shortcut icon" href="<%=require('../images/faviconka_ru_1119.png').default%>" type="image/x-icon" />
+</head>
+<body>
+  <div class="root">
+    <header class="header header_type_light">
+      <div class="header__content">
+        <h4 class="headline header__logo header__logo_type_dark">NewsAnalyzer</h4>
+        <nav class="header__nav">
+          <div class="header__nav_item">
+            <a class="link header__link_type_expect-dark header__link" href="index.html">Главная</a>
+          </div>
+          <div class="header__nav_item">
+            <a class="link header__link_type_active-dark header__link" href="about.html">О проекте</a>
+            <div class="header__link_underline header__link_underline_type_dark"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="content">
+      <section class="analytics-data">
+        <p class="analytics-data__mark">Главная<span class="light-span">/ Аналитика</span></p>
+        <h3 class="headline analytics-data__title">Вы спросили: "Путешествия"</h3>
+        <ul class="list analytics-data__news">
+          <li class="analytics-data__news_item">Новостей за неделю: <span class="num-span">34 324</span></li>
+          <li class="analytics-data__news_item">Упоминаний в заголовках: <span class="num-span">235</span></li>
+        </ul>
+      </section>
+      <section class="analytics-graph">
+        <h4 class="headline analitics-graph__title">Аналитика по дням</h4>
+        <div class="analytics-graph__subtitle">
+          <p class="analytics-graph__subtitle_date">Дата (август)</p>
+          <p class="analytics-graph__subtitle_count">Количество упоминаний</p>
+        </div>
+        <div class="analytics-graph__scale analytics-graph__scale_type_top">
+          <p class="analytics-graph__scale-num analytics-graph__scale-one">0</p>
+          <p class="analytics-graph__scale-num analytics-graph__scale-two">25</p>
+          <p class="analytics-graph__scale-num analytics-graph__scale-three">50</p>
+          <p class="analytics-graph__scale-num analytics-graph__scale-four">75</p>
+          <p class="analytics-graph__scale-num analytics-graph__scale-five">100</p>
+        </div>
+        <div class="analytics-graph__bar">
+          <time class="analytics-graph__day">19, пн</time>
+          <div class="analytics-graph__bar-item">
+            <p class="analytics-graph__bar-item_num">15</p>
+            <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_one"></div>
+          </div>
+          <time class="analytics-graph__day">20, вт</time>
+          <div class="analytics-graph__bar-item">
+            <p class="analytics-graph__bar-item_num">18</p>
+            <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_two"></div>
+          </div>
+          <time class="analytics-graph__day">21, ср</time>
+          <div class="analytics-graph__bar-item">
+            <p class="analytics-graph__bar-item_num">11</p>
+            <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_three"></div>
+          </div>
+          <time class="analytics-graph__day">22, чт</time>
+          <div class="analytics-graph__bar-item">
+            <p class="analytics-graph__bar-item_num">39</p>
+            <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_four"></div>
+          </div>
+          <time class="analytics-graph__day">23, пт</time>
+          <div class="analytics-graph__bar-item">
+            <p class="analytics-graph__bar-item_num">45</p>
+            <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_five"></div>
+          </div>
+          <time class="analytics-graph__day">24, сб</time>
+          <div class="analytics-graph__bar-item">
+            <p class="analytics-graph__bar-item_num">73</p>
+            <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_six"></div>
+          </div>
+          <time class="analytics-graph__day">25, вс</time>
+          <div class="analytics-graph__bar-item">
+            <p class="analytics-graph__bar-item_num">34</p>
+            <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_seven"></div>
+          </div>
+        </div>
+        <div class="analytics-graph__scale analytics-graph__scale_type_bottom">
+          <p class="analytics-graph__scale-num analytics-graph__scale-one">0</p>
+          <p class="analytics-graph__scale-num analytics-graph__scale-two">25</p>
+          <p class="analytics-graph__scale-num analytics-graph__scale-three">50</p>
+          <p class="analytics-graph__scale-num analytics-graph__scale-four">75</p>
+          <p class="analytics-graph__scale-num analytics-graph__scale-five">100</p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__logo">&copy; 2020. Хохлов Павел</p>
+      <nav class="footer__nav">
+        <a class="link footer__nav_item" href="index.html">Главная</a>
+        <a class="link footer__nav_item" href="about.html">О проекте</a>
+        <a class="link footer__nav_item" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+      </nav>
+      <div class="footer__links">
+        <a href="https://github.com/RD1878" class="link footer__links_item"><img src="<%=require('../images/gh.png').default%>" alt="github" class="footer__links_image"></a>
+        <a href="https://www.facebook.com/profile.php?id=100001548766863" class="link footer__links_item"><img src="<%=require('../images/fb.png').default%>" alt="facebook" class="footer__links_image"></a>
+      </div>
+    </footer>
+  </div>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>

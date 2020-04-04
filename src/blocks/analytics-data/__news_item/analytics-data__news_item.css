@@ -1,0 +1,10 @@
+.analytics-data__news_item {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.analytics-data__news_item:last-of-type {
+  margin-bottom: 0;
+}
+
