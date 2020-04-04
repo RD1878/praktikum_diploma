@@ -3,6 +3,18 @@
 @import url(./__link_image/commits__link_image.css);
 @import url(./__link_text/commits__link_text.css);
 @import url(./__title/commits__title.css);
+@import url(./__button/commits__button.css);
+@import url(./__container/commits__container.css);
+@import url(./__slide/commits__slide.css);
+@import url(./__wraper/commits__wraper.css);
+@import url(./__author/commits__author.css);
+@import url(./__author_data/commits__author_data.css);
+@import url(./__author_name/commits__author_name.css);
+@import url(./__author_email/commits__author_email.css);
+@import url(./__author_photo/commits__author_photo.css);
+@import url(./__date/commits__date.css);
+@import url(./__text/commits__text.css);
+@import url(./__pagination/commits__pagination.css);
 
 .commits {
   padding-top: 72px;

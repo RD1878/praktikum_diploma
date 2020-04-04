@@ -1,0 +1,8 @@
+.commits__author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
