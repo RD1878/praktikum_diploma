@@ -1,0 +1,7 @@
+.author__info_subtitle_paragraph {
+  margin-bottom: 24px;
+}
+
+.author__info_subtitle_paragraph:last-of-type {
+  margin-bottom: 0;
+}

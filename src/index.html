@@ -29,14 +29,13 @@
     </header>
     <main class="content">
       <section class="lead">
-        <img class="lead__image" src="/src/images/georgia-de-lotz--UsJoNxLaNo-unsplash.png">
         <h1 class="headline lead__title">Что в мире<br>творится?</h1>
         <p class="lead__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
         <div class="lead__search">
           <form class="lead__form" name="search">
             <input type="text" name="theme" class="lead__input lead__input_type_theme" placeholder="Введите тему новости">
-            <button type class="button lead__button">Искать</button>
         </form>
+        <button type class="button lead__button">Искать</button>
         </div>
       </section>
       <section class="news">
@@ -61,27 +60,33 @@
             <div class="news__item">
               <img class="news__item_image" alt="Image" src="<%=require('./images/image_08.png').default%>">
               <div class="news__item_content">
-                <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
-                <h4 class="headline api-block__item_title news__item_title">Национальное достояние – парки</h4>
-                <p class="api-block__item_text news__item_subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                <div class="news__item_content_info">
+                  <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
+                  <h4 class="headline api-block__item_title news__item_title">Национальное достояние – парки</h4>
+                  <article class="api-block__item_text news__item_subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</article>
+                </div>
                 <a class="link news__item_source" href="#">Лента</a>
               </div>
             </div>
             <div class="news__item">
               <img class="news__item_image" alt="Image" src="<%=require('./images/image_04.png').default%>">
               <div class="news__item_content">
-                <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
-                <h4 class="headline api-block__item_title news__item_title">Лесные огоньки: история одной фотографии</h4>
-                <p class="api-block__item_text news__item_subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                <div class="news__item_content_info">
+                  <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
+                  <h4 class="headline api-block__item_title news__item_title">Лесные огоньки: история одной фотографии</h4>
+                  <article class="api-block__item_text news__item_subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</article>
+                </div>
                 <a class="link news__item_source" href="#">Медуза</a>
               </div>
             </div>
             <div class="news__item">
               <img class="news__item_image" alt="Image" src="<%=require('./images/image_07.png').default%>">
               <div class="news__item_content">
-                <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
-                <h4 class="headline api-block__item_title news__item_title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
-                <p class="api-block__item_text news__item_subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                <div class="news__item_content_info">
+                  <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
+                  <h4 class="headline api-block__item_title news__item_title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
+                  <article class="api-block__item_text news__item_subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</article>
+                </div>
                 <a class="link news__item_source" href="#">РИА</a>
               </div>
             </div>
@@ -90,27 +95,33 @@
             <div class="news__item">
               <img class="news__item_image" alt="Image" src="<%=require('./images/image_06.png').default%>">
               <div class="news__item_content">
-                <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
-                <h4 class="headline api-block__item_title news__item_title">Национальное достояние – парки</h4>
-                <p class="api-block__item_text news__item_subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                <div class="news__item_content_info">
+                  <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
+                  <h4 class="headline api-block__item_title news__item_title">Национальное достояние – парки</h4>
+                  <article class="api-block__item_text news__item_subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</article>
+                </div>
                 <a class="link news__item_source" href="#">Дзен</a>
               </div>
             </div>
             <div class="news__item">
               <img class="news__item_image" alt="Image" src="<%=require('./images/image_01.png').default%>">
               <div class="news__item_content">
-                <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
-                <h4 class="headline api-block__item_title news__item_title">Лесные огоньки: история одной фотографии</h4>
-                <p class="api-block__item_text news__item_subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                <div class="news__item_content_info">
+                  <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
+                  <h4 class="headline api-block__item_title news__item_title">Лесные огоньки: история одной фотографии</h4>
+                  <article class="api-block__item_text news__item_subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</article>
+                </div>
                 <a class="link news__item_source" href="#">Афиша</a>
               </div>
             </div>
             <div class="news__item">
               <img class="news__item_image" alt="Image" src="<%=require('./images/image_05.png').default%>">
               <div class="news__item_content">
-                <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
-                <h4 class="headline api-block__item_title news__item_title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
-                <p class="api-block__item_text news__item_subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                <div class="news__item_content_info">
+                  <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
+                  <h4 class="headline api-block__item_title news__item_title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
+                  <article class="api-block__item_text news__item_subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</article>
+                </div>
                 <a class="link news__item_source" href="#">Медиазона</a>
               </div>
             </div>
@@ -122,20 +133,25 @@
         <img class="author__photo" alt="Author Photo" src="<%=require('./images/image-03.png').default%>">
         <div class="author__info">
           <h3 class="headline author__info_title">Об авторе</h3>
-          <article class="author__info_subtitle">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.  Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</article>
+          <article class="author__info_subtitle">
+            <p class="author__info_subtitle_paragraph">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+            <p class="author__info_subtitle_paragraph">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+          </article>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <p class="footer__logo">&copy; 2020. Хохлов Павел</p>
-      <nav class="footer__nav">
+      <span class="footer__logo">&copy; 2020. Хохлов Павел</span>
+      <div class="footer__content">
+        <nav class="footer__nav">
         <a class="link footer__nav_item" href="index.html">Главная</a>
         <a class="link footer__nav_item" href="about.html">О проекте</a>
         <a class="link footer__nav_item" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
-      </nav>
-      <div class="footer__links">
-        <a href="https://github.com/RD1878" class="link footer__links_item"><img src="<%=require('./images/gh.png').default%>" alt="github" class="footer__links_image"></a>
-        <a href="https://www.facebook.com/profile.php?id=100001548766863" class="link footer__links_item"><img src="<%=require('./images/fb.png').default%>" alt="facebook" class="footer__links_image"></a>
+        </nav>
+        <div class="footer__links">
+          <a href="https://github.com/RD1878" class="link footer__links_item"><img src="<%=require('./images/gh.png').default%>" alt="github" class="footer__links_image"></a>
+          <a href="https://www.facebook.com/profile.php?id=100001548766863" class="link footer__links_item"><img src="<%=require('./images/fb.png').default%>" alt="facebook" class="footer__links_image"></a>
+        </div>
       </div>
     </footer>
   </div>

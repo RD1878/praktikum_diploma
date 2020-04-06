@@ -42,19 +42,19 @@
         <h3 class="headline technology__title">Используемые технологии</h3>
         <div class="technology__container">
           <div class="technology__item">
-            <h5 class="headline technology__item_title">HTML</h5>
+            <span class="headline technology__item_title">HTML</span>
             <img class="headline technology__item_pic" alt="HTML" src="<%=require('../images/HTML.png').default%>">
           </div>
           <div class="technology__item">
-            <h5 class="headline technology__item_title">CSS</h5>
+            <span class="technology__item_title">CSS</span>
             <img class="headline technology__item_pic" alt="CSS" src="<%=require('../images/CSS.png').default%>">
           </div>
           <div class="technology__item">
-            <h5 class="headline technology__item_title">Java Script</h5>
+            <span class="technology__item_title">Java Script</span>
             <img class="headline technology__item_pic" alt="JS" src="<%=require('../images/js.png').default%>">
           </div>
           <div class="technology__item">
-            <h5 class="headline technology__item_title">Webpack</h5>
+            <span class="technology__item_title">Webpack</span>
             <img class="headline technology__item_pic" alt="WP" src="<%=require('../images/webpack.png').default%>">
           </div>
         </div>
@@ -63,7 +63,10 @@
         <img class="author__photo" alt="Author Photo" src="<%=require('../images/image-03.png').default%>">
         <div class="author__info">
           <h3 class="headline author__info_title">Об авторе</h3>
-          <article class="author__info_subtitle">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.  Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</article>
+          <article class="author__info_subtitle">
+            <p class="author__info_subtitle_paragraph">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+            <p class="author__info_subtitle_paragraph">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+          </article>
         </div>
       </section>
       <section class="commits api-block">
@@ -120,15 +123,17 @@
       </section>
     </main>
     <footer class="footer">
-      <p class="footer__logo">&copy; 2020. Хохлов Павел</p>
-      <nav class="footer__nav">
-        <a class="link footer__nav_item" href="index.html">Главная</a>
-        <a class="link footer__nav_item" href="about.html">О проекте</a>
-        <a class="link footer__nav_item" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
-      </nav>
-      <div class="footer__links">
-        <a href="https://github.com/RD1878" class="link footer__links_item"><img src="<%=require('../images/gh.png').default%>" alt="github" class="footer__links_image"></a>
-        <a href="https://www.facebook.com/profile.php?id=100001548766863" class="link footer__links_item"><img src="<%=require('../images/fb.png').default%>" alt="facebook" class="footer__links_image"></a>
+      <span class="footer__logo">&copy; 2020. Хохлов Павел</span>
+      <div class="footer__content">
+        <nav class="footer__nav">
+          <a class="link footer__nav_item" href="index.html">Главная</a>
+          <a class="link footer__nav_item" href="about.html">О проекте</a>
+          <a class="link footer__nav_item" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+        </nav>
+        <div class="footer__links">
+          <a href="https://github.com/RD1878" class="link footer__links_item"><img src="<%=require('../images/gh.png').default%>" alt="github" class="footer__links_image"></a>
+          <a href="https://www.facebook.com/profile.php?id=100001548766863" class="link footer__links_item"><img src="<%=require('../images/fb.png').default%>" alt="facebook" class="footer__links_image"></a>
+        </div>
       </div>
     </footer>
   </div>

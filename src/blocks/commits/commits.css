@@ -21,3 +21,15 @@
   padding-bottom: 80px;
   max-height: 606px;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .commits {
+  padding: 40px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .commits {
+  padding: 32px 16px 32px 16px;
+  }
+}

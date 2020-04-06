@@ -1,4 +1,7 @@
 .lead__search {
+  display: flex;
+  flex-direction: row;
+  position: relative;
   max-width: 608px;
   max-height: 64px;
 

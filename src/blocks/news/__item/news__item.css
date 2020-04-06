@@ -4,7 +4,8 @@
   width: calc(100% / 3);
   max-width: 400px;
   margin-right: 16px;
-  max-height: 576px;
+  min-height: 576px;
+  /*height: 576px;*/
 }
 
 .news__item:last-of-type {

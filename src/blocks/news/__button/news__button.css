@@ -2,8 +2,8 @@
 
 .news__button {
   margin: 48px auto 0 auto;
-  min-width: 288px;
-  min-height: 64px;
+  width: 288px;
+  height: 64px;
 
   font-weight: 500;
   font-size: 18px;

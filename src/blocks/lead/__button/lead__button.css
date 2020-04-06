@@ -1,6 +1,8 @@
 .lead__button {
-  min-width: 168px;
-  min-height: 64px;
+  width: 168px;
+  height: 64px;
+  position: absolute;
+  right: 0;
 
   font-weight: 500;
   font-size: 18px;

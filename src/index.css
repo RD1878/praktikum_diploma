@@ -15,6 +15,7 @@
 @import url(./blocks/news/news.css);
 @import url(./blocks/root/root.css);
 @import url(./blocks/headline/headline.css);
+@import url(./blocks/paragraph/paragraph.css);
 @import url(./blocks/date/date.css);
 @import url(./blocks/api-block/api-block.css);
 @import url(./blocks/light-span/light-span.css);

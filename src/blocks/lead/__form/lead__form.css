@@ -10,6 +10,6 @@
   backdrop-filter: blur(100px);
 
   border-radius: 100px;
-  min-height: 64px;
-  min-width: 608px;
+  height: 64px;
+  width: 608px;
 }
