@@ -3,30 +3,4 @@
   flex-direction: column;
   width: 100%;
   position: relative;
-
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
-}
-
-div, a, p, h1, h2, h3, h4, h5, h6, img, span, main, section, nav, li, ul, footer, header, body, time {
-  /*border: solid 1px red;*/
-  margin: 0;
-}
-
-body {
-  width: 100%;
-  min-width: 320px;
-  max-width: 1440px;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  background-color: #F5F6F7;
-  color: #1A1B22;
 }
