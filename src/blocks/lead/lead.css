@@ -54,6 +54,10 @@
     height: 56px;
 
   }
+
+  .lead__input {
+    width: calc(100% - 208px);
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -106,5 +110,7 @@
 
   .lead__input {
     height: auto;
+    margin-right: 24px;
+    width: 100%;
   }
 }

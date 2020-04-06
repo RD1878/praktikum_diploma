@@ -15,6 +15,7 @@
 @import url(./__date/commits__date.css);
 @import url(./__text/commits__text.css);
 @import url(./__pagination/commits__pagination.css);
+@import url(./__link-extra/commits__link-extra.css);
 
 .commits {
   padding-top: 72px;
@@ -22,9 +23,28 @@
   max-height: 606px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1429px) {
   .commits {
-  padding: 40px;
+    padding: 40px;
+  }
+
+  .commits__button {
+    display: none;
+  }
+
+  .commits__slide {
+    min-width: 336px;
+    min-height: 194px;
+    max-height: 194px;
+  }
+
+  .commits__author_photo {
+    max-width: 48px;
+    max-height: 48px;
+  }
+
+  .commits__title {
+    max-width: 336px;
   }
 }
 
@@ -32,4 +52,28 @@
   .commits {
   padding: 32px 16px 32px 16px;
   }
+
+  .commits__button {
+    display: none;
+  }
+
+  .commits__slide {
+    min-width: 288px;
+    min-height: 216px;
+    max-height: 216px;
+  }
+
+  .commits__link {
+    display: none;
+
+  }
+
+  .commits__link-extra {
+    display: block;
+  }
+
+  .commits__head {
+    margin-bottom: 16px;
+  }
+
 }

@@ -6,22 +6,20 @@ import Swiper from '../../node_modules/swiper/js/swiper';
 const func = () => {
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
-    slidesPerView: 3.5,
-    direction: 'horizontal',
+    slidesPerView: 'auto',
     centeredSlides: true,
+    direction: 'horizontal',
     loop: true,
-    updateOnWindowResize: true,
-    watchOverflow: true,
+    simulateTouch: true,
     spaceBetween: 16,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.commits__pagination',
       dynamicBullets: true,
     },
-    //effect: 'slide',
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.commits__button_type_right',
+      prevEl: '.commits__button_type_left',
     }
   })
 };
