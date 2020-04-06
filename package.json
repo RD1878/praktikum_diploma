@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/RD1878/praktikum_diploma/issues"
   },
-  "homepage": "https://github.com/RD1878/praktikum_diploma#readme",
+  "homepage": "rd1878.github.io/praktikum_diploma/",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
@@ -29,7 +29,7 @@
     "css-loader": "^3.4.2",
     "cssnano": "^4.1.10",
     "file-loader": "^6.0.0",
-    "gh-pages": "^2.2.0",
+    "gh-pages": "~2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
