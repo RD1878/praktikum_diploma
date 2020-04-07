@@ -6,6 +6,7 @@
 @import url(./__nav_item/header__nav_item.css);
 @import url(./_type/header_type_light.css);
 @import url(./_type/header_type_dark.css);
+@import url(./__nav-list/header__nav-list.css);
 
 .header {
   max-height: 80px;

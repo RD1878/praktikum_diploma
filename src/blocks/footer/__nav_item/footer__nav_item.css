@@ -1,10 +1,5 @@
 .footer__nav_item {
-  margin-right: 46px;
-
-  font-size: 18px;
-  line-height: 24px;
-
-  color: #1A1B22;
+  margin-right: 40px;
 }
 
 .footer__nav_item:last-of-type {

@@ -17,20 +17,22 @@
       <div class="header__content">
         <h4 class="headline header__logo header__logo_type_dark">NewsAnalyzer</h4>
         <nav class="header__nav">
-          <div class="header__nav_item">
-            <a class="link header__link_type_expect-dark header__link" href="index.html">Главная</a>
-          </div>
-          <div class="header__nav_item">
-            <a class="link header__link_type_active-dark header__link" href="about.html">О проекте</a>
-            <div class="header__link_underline header__link_underline_type_dark"></div>
-          </div>
+          <ul class="nav-list header__nav-list">
+            <li class="header__nav_item">
+              <a class="link header__link_type_expect-dark header__link" href="index.html">Главная</a>
+            </li>
+            <li class="header__nav_item">
+              <a class="link header__link_type_active-dark header__link" href="about.html">О проекте</a>
+              <div class="header__link_underline header__link_underline_type_dark"></div>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
     <main class="content">
       <section class="info">
-        <h3 class="headline info__title">Клиентам</h3>
-        <article class="info__subtitle">
+        <article class="info__article">
+          <h3 class="headline info__title">Клиентам</h3>
           <p class="info__subtitle_paragraph">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.</p>
           <p class="info__subtitle_paragraph">Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
           <p class="info__subtitle_paragraph">Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.</p>
@@ -62,8 +64,8 @@
       <section class="author">
         <img class="author__photo" alt="Author Photo" src="<%=require('../images/image-03.png').default%>">
         <div class="author__info">
-          <h3 class="headline author__info_title">Об авторе</h3>
-          <article class="author__info_subtitle">
+          <article class="author__info_article">
+            <h3 class="headline author__info_title">Об авторе</h3>
             <p class="author__info_subtitle_paragraph">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
             <p class="author__info_subtitle_paragraph">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
           </article>
@@ -80,7 +82,7 @@
         <div class="commits__container swiper-container">
           <div class="commits__wraper swiper-wrapper">
             <div class="commits__slide swiper-slide">
-              <time class="api-block__item_date commits__date">14 августа, 2019</time>
+              <p class="api-block__item_date commits__date">14 августа, 2019</p>
               <div class="commits__author">
                 <img class="commits__author_photo" alt="Photo" src="<%=require('../images/image-01.png').default%>">
                 <div class="commits__author_data">
@@ -91,7 +93,7 @@
               <p class="api-block__item_text commits__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
             </div>
             <div class="commits__slide swiper-slide">
-              <time class="api-block__item_date commits__date">14 августа, 2019</time>
+              <p class="api-block__item_date commits__date">14 августа, 2019</p>
               <div class="commits__author">
                 <img class="commits__author_photo" alt="Photo" src="<%=require('../images/image-04.png').default%>">
                 <div class="commits__author_data">
@@ -102,7 +104,7 @@
               <p class="api-block__item_text commits__text">You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open Tools > Plugins > Available plugins and find and install Emmet plugin.</p>
             </div>
             <div class="commits__slide swiper-slide">
-              <time class="api-block__item_date commits__date">14 августа, 2019</time>
+              <p class="api-block__item_date commits__date">14 августа, 2019</p>
               <div class="commits__author">
                 <img class="commits__author_photo" alt="Photo" src="<%=require('../images/image-05.png').default%>">
                 <div class="commits__author_data">
@@ -124,9 +126,11 @@
       <span class="footer__logo">&copy; 2020. Хохлов Павел</span>
       <div class="footer__content">
         <nav class="footer__nav">
-          <a class="link footer__nav_item" href="index.html">Главная</a>
-          <a class="link footer__nav_item" href="about.html">О проекте</a>
-          <a class="link footer__nav_item" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+          <ul class="nav-list footer__nav-list">
+            <li class="footer__nav_item"><a class="link footer__nav_link" href="index.html">Главная</a></li>
+            <li class="footer__nav_item"><a class="link footer__nav_link" href="about.html">О проекте</a></li>
+            <li class="footer__nav_item"><a class="link footer__nav_link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a></li>
+          </ul>
         </nav>
         <div class="footer__links">
           <a href="https://github.com/RD1878" class="link footer__links_item"><img src="<%=require('../images/gh.png').default%>" alt="github" class="footer__links_image"></a>

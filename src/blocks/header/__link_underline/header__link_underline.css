@@ -1,5 +1,6 @@
 @import url(./_type/header__link_underline_type_dark.css);
 @import url(./_type/header__link_underline_type_light.css);
+@import url(./_type/header__link_underline_type_none.css);
 
 .header__link_underline {
   height: 3px;

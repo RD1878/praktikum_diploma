@@ -17,13 +17,15 @@
       <div class="header__content">
         <h4 class="headline header__logo header__logo_type_light">NewsAnalyzer</h4>
         <nav class="header__nav">
-          <div class="header__nav_item">
-            <a class="link header__link_type_active-light header__link" href="index.html">Главная</a>
+          <ul class="nav-list header__nav-list">
+            <li class="header__nav_item">
+              <a class="link header__link_type_active-light header__link" href="index.html">Главная</a>
             <div class="header__link_underline header__link_underline_type_light"></div>
-          </div>
-          <div class="header__nav_item">
-            <a class="link header__link_type_expect-light header__link" href="about.html">О проекте</a>
-          </div>
+            </li>
+            <li class="header__nav_item">
+              <a class="link header__link_type_expect-light header__link" href="about.html">О проекте</a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -33,9 +35,9 @@
         <p class="lead__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
         <div class="lead__search">
           <form class="lead__form" name="search">
-            <input type="text" name="theme" class="lead__input lead__input_type_theme" placeholder="Введите тему новости">
+            <input type="text" name="theme" required class="lead__input lead__input_type_theme" placeholder="Введите тему новости">
         </form>
-        <button type class="button lead__button">Искать</button>
+        <button type="submit" class="button lead__button">Искать</button>
         </div>
       </section>
       <section class="news">
@@ -61,9 +63,9 @@
               <img class="news__item_image" alt="Image" src="<%=require('./images/image_08.png').default%>">
               <div class="news__item_content">
                 <div class="news__item_content_info">
-                  <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
+                  <p class="date api-block__item_date news__item_date">2 августа, 2019</p>
                   <h4 class="headline api-block__item_title news__item_title">Национальное достояние – парки</h4>
-                  <article class="api-block__item_text news__item_subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</article>
+                  <p class="api-block__item_text news__item_subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
                 </div>
                 <a class="link news__item_source" href="#">Лента</a>
               </div>
@@ -72,9 +74,9 @@
               <img class="news__item_image" alt="Image" src="<%=require('./images/image_04.png').default%>">
               <div class="news__item_content">
                 <div class="news__item_content_info">
-                  <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
+                  <p class="date api-block__item_date news__item_date">2 августа, 2019</p>
                   <h4 class="headline api-block__item_title news__item_title">Лесные огоньки: история одной фотографии</h4>
-                  <article class="api-block__item_text news__item_subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</article>
+                  <p class="api-block__item_text news__item_subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
                 </div>
                 <a class="link news__item_source" href="#">Медуза</a>
               </div>
@@ -83,9 +85,9 @@
               <img class="news__item_image" alt="Image" src="<%=require('./images/image_07.png').default%>">
               <div class="news__item_content">
                 <div class="news__item_content_info">
-                  <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
+                  <p class="date api-block__item_date news__item_date">2 августа, 2019</p>
                   <h4 class="headline api-block__item_title news__item_title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
-                  <article class="api-block__item_text news__item_subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</article>
+                  <p class="api-block__item_text news__item_subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
                 </div>
                 <a class="link news__item_source" href="#">РИА</a>
               </div>
@@ -96,9 +98,9 @@
               <img class="news__item_image" alt="Image" src="<%=require('./images/image_06.png').default%>">
               <div class="news__item_content">
                 <div class="news__item_content_info">
-                  <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
+                  <p class="date api-block__item_date news__item_date">2 августа, 2019</p>
                   <h4 class="headline api-block__item_title news__item_title">Национальное достояние – парки</h4>
-                  <article class="api-block__item_text news__item_subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</article>
+                  <p class="api-block__item_text news__item_subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
                 </div>
                 <a class="link news__item_source" href="#">Дзен</a>
               </div>
@@ -107,9 +109,9 @@
               <img class="news__item_image" alt="Image" src="<%=require('./images/image_01.png').default%>">
               <div class="news__item_content">
                 <div class="news__item_content_info">
-                  <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
+                  <p class="date api-block__item_date news__item_date">2 августа, 2019</p>
                   <h4 class="headline api-block__item_title news__item_title">Лесные огоньки: история одной фотографии</h4>
-                  <article class="api-block__item_text news__item_subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</article>
+                  <p class="api-block__item_text news__item_subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
                 </div>
                 <a class="link news__item_source" href="#">Афиша</a>
               </div>
@@ -118,22 +120,22 @@
               <img class="news__item_image" alt="Image" src="<%=require('./images/image_05.png').default%>">
               <div class="news__item_content">
                 <div class="news__item_content_info">
-                  <time class="date api-block__item_date news__item_date">2 августа, 2019</time>
+                  <p class="date api-block__item_date news__item_date">2 августа, 2019</p>
                   <h4 class="headline api-block__item_title news__item_title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
-                  <article class="api-block__item_text news__item_subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</article>
+                  <p class="api-block__item_text news__item_subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
                 </div>
                 <a class="link news__item_source" href="#">Медиазона</a>
               </div>
             </div>
           </div>
-          <button class="button news__button news__button_active">Показать еще</button>
+          <button type="button" class="button news__button news__button_active">Показать еще</button>
         </div>
       </section>
       <section class="author">
         <img class="author__photo" alt="Author Photo" src="<%=require('./images/image-03.png').default%>">
         <div class="author__info">
-          <h3 class="headline author__info_title">Об авторе</h3>
-          <article class="author__info_subtitle">
+          <article class="author__info_article">
+            <h3 class="headline author__info_title">Об авторе</h3>
             <p class="author__info_subtitle_paragraph">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
             <p class="author__info_subtitle_paragraph">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
           </article>
@@ -144,9 +146,11 @@
       <span class="footer__logo">&copy; 2020. Хохлов Павел</span>
       <div class="footer__content">
         <nav class="footer__nav">
-        <a class="link footer__nav_item" href="index.html">Главная</a>
-        <a class="link footer__nav_item" href="about.html">О проекте</a>
-        <a class="link footer__nav_item" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+          <ul class="nav-list footer__nav-list">
+            <li class="footer__nav_item"><a class="link footer__nav_link" href="index.html">Главная</a></li>
+            <li class="footer__nav_item"><a class="link footer__nav_link" href="about.html">О проекте</a></li>
+            <li class="footer__nav_item"><a class="link footer__nav_link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a></li>
+          </ul>
         </nav>
         <div class="footer__links">
           <a href="https://github.com/RD1878" class="link footer__links_item"><img src="<%=require('./images/gh.png').default%>" alt="github" class="footer__links_image"></a>
