@@ -7,7 +7,7 @@
   <meta name="author" content="Павел Хохлов">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NewsAnalyzer. Аналитика событий за неделю</title>
-  <link rel="stylesheet" href="style.d8dd793c578edd33ab9c.css">
+  <link rel="stylesheet" href="style.2acf6fb92c3cfeaf374e.css">
   <link rel="icon" href="./images/faviconka_ru_1119.png" type="image/x-icon" />
   <link rel="shortcut icon" href="./images/faviconka_ru_1119.png" type="image/x-icon" />
 </head>
@@ -17,13 +17,15 @@
       <div class="header__content">
         <h4 class="headline header__logo header__logo_type_dark">NewsAnalyzer</h4>
         <nav class="header__nav">
-          <div class="header__nav_item">
-            <a class="link header__link_type_expect-dark header__link" href="index.html">Главная</a>
-          </div>
-          <div class="header__nav_item">
-            <a class="link header__link_type_active-dark header__link" href="about.html">О проекте</a>
-            <div class="header__link_underline header__link_underline_type_dark"></div>
-          </div>
+          <ul class="nav-list header__nav-list">
+            <li class="header__nav_item">
+              <a class="link header__link_type_expect-dark header__link" href="index.html">Главная</a>
+            </li>
+            <li class="header__nav_item">
+              <a class="link header__link_type_expect-dark header__link" href="about.html">О проекте</a>
+              <div class="header__link_underline header__link_underline_type_none"></div>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -50,37 +52,37 @@
           <p class="analytics-graph__scale-num analytics-graph__scale-five">100</p>
         </div>
         <div class="analytics-graph__bar">
-          <time class="analytics-graph__day">19, пн</time>
+          <p class="analytics-graph__day">19, пн</p>
           <div class="analytics-graph__bar-item">
             <p class="analytics-graph__bar-item_num">15</p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_one"></div>
           </div>
-          <time class="analytics-graph__day">20, вт</time>
+          <p class="analytics-graph__day">20, вт</p>
           <div class="analytics-graph__bar-item">
             <p class="analytics-graph__bar-item_num">18</p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_two"></div>
           </div>
-          <time class="analytics-graph__day">21, ср</time>
+          <p class="analytics-graph__day">21, ср</p>
           <div class="analytics-graph__bar-item">
             <p class="analytics-graph__bar-item_num">11</p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_three"></div>
           </div>
-          <time class="analytics-graph__day">22, чт</time>
+          <p class="analytics-graph__day">22, чт</p>
           <div class="analytics-graph__bar-item">
             <p class="analytics-graph__bar-item_num">39</p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_four"></div>
           </div>
-          <time class="analytics-graph__day">23, пт</time>
+          <p class="analytics-graph__day">23, пт</p>
           <div class="analytics-graph__bar-item">
             <p class="analytics-graph__bar-item_num">45</p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_five"></div>
           </div>
-          <time class="analytics-graph__day">24, сб</time>
+          <p class="analytics-graph__day">24, сб</p>
           <div class="analytics-graph__bar-item">
             <p class="analytics-graph__bar-item_num">73</p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_six"></div>
           </div>
-          <time class="analytics-graph__day">25, вс</time>
+          <p class="analytics-graph__day">25, вс</p>
           <div class="analytics-graph__bar-item">
             <p class="analytics-graph__bar-item_num">34</p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_seven"></div>
@@ -99,9 +101,11 @@
       <span class="footer__logo">&copy; 2020. Хохлов Павел</span>
       <div class="footer__content">
         <nav class="footer__nav">
-          <a class="link footer__nav_item" href="index.html">Главная</a>
-          <a class="link footer__nav_item" href="about.html">О проекте</a>
-          <a class="link footer__nav_item" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+          <ul class="nav-list footer__nav-list">
+            <li class="footer__nav_item"><a class="link footer__nav_link" href="index.html">Главная</a></li>
+            <li class="footer__nav_item"><a class="link footer__nav_link" href="about.html">О проекте</a></li>
+            <li class="footer__nav_item"><a class="link footer__nav_link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a></li>
+          </ul>
         </nav>
         <div class="footer__links">
           <a href="https://github.com/RD1878" class="link footer__links_item"><img src="./images/gh.png" alt="github" class="footer__links_image"></a>
