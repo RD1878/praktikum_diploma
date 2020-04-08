@@ -3,7 +3,6 @@
 @import url(./_type/header__link_underline_type_none.css);
 
 .header__link_underline {
-  height: 3px;
   width: 100%;
   margin-top: 23px;
 }
