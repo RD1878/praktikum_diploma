@@ -1,0 +1,5 @@
+.commits__button_type_right {
+  background-image: url(../../../../images/slider-control-right.png);
+  right: 24px;
+  left: auto;
+}

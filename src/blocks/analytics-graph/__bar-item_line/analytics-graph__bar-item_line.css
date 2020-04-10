@@ -1,0 +1,13 @@
+@import url(./analytics-graph__bar-item_line_one.css);
+@import url(./analytics-graph__bar-item_line_two.css);
+@import url(./analytics-graph__bar-item_line_three.css);
+@import url(./analytics-graph__bar-item_line_four.css);
+@import url(./analytics-graph__bar-item_line_five.css);
+@import url(./analytics-graph__bar-item_line_six.css);
+@import url(./analytics-graph__bar-item_line_seven.css);
+
+
+.analytics-graph__bar-item_line {
+  height: 100%;
+  background-color: #2F71E5;
+}

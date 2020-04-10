@@ -1,0 +1,8 @@
+.api-block__head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 104px;
+  margin-right: 104px;
+  align-items: baseline;
+}

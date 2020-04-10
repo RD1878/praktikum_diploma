@@ -1,0 +1,13 @@
+.technology__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 120px;
+  max-height: 153px;
+  margin-right: 40px;
+}
+
+.technology__item:last-of-type {
+  margin-right: 0;
+}

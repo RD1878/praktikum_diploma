@@ -1,0 +1,7 @@
+.footer__nav_item {
+  margin-right: 40px;
+}
+
+.footer__nav_item:last-of-type {
+  margin-right: 0;
+}

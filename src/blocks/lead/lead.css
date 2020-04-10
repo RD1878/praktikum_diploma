@@ -1,0 +1,116 @@
+@import url(./__button/lead__button.css);
+@import url(./__form/lead__form.css);
+@import url(./__input/lead__input.css);
+@import url(./__search/lead__search.css);
+@import url(./__subtitle/lead__subtitle.css);
+@import url(./__title/lead__title.css);
+/*@import url(./__image/lead__image.css);*/
+
+.lead {
+  min-height: 576px;
+  position: relative;
+  background-image: url(../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png);
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .lead {
+    min-height: 400px;
+  }
+
+  .lead__title {
+    max-width: 385px;
+    max-height: 80px;
+    font-size: 36px;
+    line-height: 40px;
+    top: 104px;
+    left: 160px;
+  }
+
+  .lead__subtitle {
+    max-width: 452px;
+    max-height: 72px;
+    font-size: 18px;
+    line-height: 24px;
+    top: 200px;
+    left: 160px;
+  }
+
+  .lead__search {
+    max-width: 448px;
+    max-height: 56px;
+    top: 296px;
+    left: 160px;
+  }
+
+  .lead__form {
+    height: 56px;
+    width: 448px;
+  }
+
+  .lead__button {
+    width: 160px;
+    height: 56px;
+
+  }
+
+  .lead__input {
+    width: calc(100% - 208px);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .lead {
+    min-height: 536px;
+  }
+
+  .lead__title {
+    max-width: 285px;
+    max-height: 80px;
+    font-size: 36px;
+    line-height: 40px;
+    top: 86px;
+    left: 16px;
+    right: 16px;
+    margin: auto;
+  }
+
+  .lead__subtitle {
+    max-width: 288px;
+    max-height: 130px;
+    font-size: 20px;
+    line-height: 26px;
+    top: 182px;
+    left: 16px;
+    right: 16px;
+    margin: auto;
+  }
+
+  .lead__form {
+    height: 56px;
+    width: 288px;
+    top: 376px;
+  }
+
+  .lead__button {
+    position: absolute;
+    width: 288px;
+    height: 56px;
+    top: 70px;
+  }
+
+  .lead__search {
+    top: 376px;
+    left: 16px;
+    right: 16px;
+    margin: auto;
+    max-width: 288px;
+  }
+
+  .lead__input {
+    height: auto;
+    margin-right: 24px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,9 @@
+.author__info_title {
+  max-height: 46px;
+  margin-bottom: 24px;
+  width: auto;
+
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: normal;
+}

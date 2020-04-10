@@ -1,0 +1,15 @@
+.analytics-graph__bar-item_num {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 0;
+
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+
+  color: #FFF;
+
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  bottom: 50%;
+}

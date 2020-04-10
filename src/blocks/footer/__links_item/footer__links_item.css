@@ -1,0 +1,9 @@
+.footer__links_item {
+  height: max-content;
+  width: max-content;
+  margin-right: 26px;
+}
+
+.footer__links_item:last-of-type {
+  margin-right: 0;
+}

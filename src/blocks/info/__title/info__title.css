@@ -1,0 +1,10 @@
+.info__title {
+  max-width: 350px;
+  margin-bottom: 24px;
+
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+}

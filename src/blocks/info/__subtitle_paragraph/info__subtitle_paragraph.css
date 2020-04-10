@@ -1,0 +1,9 @@
+.info__subtitle_paragraph {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+
+.info__subtitle_paragraph:last-of-type {
+  margin-bottom: 0;
+}

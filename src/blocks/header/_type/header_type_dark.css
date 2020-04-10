@@ -1,0 +1,6 @@
+.header_type_dark {
+  position: absolute;
+  z-index: 1;
+
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}

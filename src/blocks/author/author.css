@@ -1,0 +1,82 @@
+@import url(./__info_title/author__info_title.css);
+@import url(./__info/author__info.css);
+@import url(./__photo/author__photo.css);
+@import url(./__info_article/author__info_article.css);
+@import url(./__info_subtitle_paragraph/author__info_subtitle_paragraph.css);
+
+
+.author {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  padding-left: 104px;
+  padding-right: 216px;
+  background-color: #FFF;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .author__photo {
+    max-width: 340px;
+    max-height: 340px;
+  }
+  .author__info {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .author {
+    padding: 40px;
+  }
+
+  .author__photo {
+    max-width: 232px;
+    max-height: 232px;
+    margin-top: 21px;
+    margin-bottom: 21px;
+  }
+
+  .author__info {
+    padding-top: 0;
+  }
+
+  .author__info_article {
+    max-width: 424px;
+  }
+
+  .author__info_title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .author {
+    flex-direction: column;
+    padding: 32px 16px 32px 16px;
+  }
+
+  .author__photo {
+    max-width: 272px;
+    max-height: 272px;
+    margin: auto;
+  }
+
+  .author__info {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    padding-top: 0;
+  }
+
+  .author__info_title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .author__info_subtitle_paragraph {
+    margin-bottom: 8px;
+  }
+}

@@ -1,0 +1,9 @@
+.commits__slide {
+  border-radius: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #fff;
+  min-height: 240px;
+  max-height: 240px;
+  max-width: 400px;
+}

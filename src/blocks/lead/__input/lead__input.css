@@ -1,0 +1,24 @@
+@import url(./_type/lead__input_type_theme.css);
+
+.lead__input {
+  font-size: 16px;
+  line-height: 22px;
+  color: #1A1B22;
+  margin-left: 24px;
+  border: 0;
+  width: calc(100% - 216px);
+  border-radius: 100px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+}
+
+.lead__input::placeholder {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+}

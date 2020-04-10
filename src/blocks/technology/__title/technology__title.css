@@ -1,0 +1,11 @@
+.technology__title {
+  max-width: 344px;
+  height: fit-content;
+  padding-right: 100px;
+
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+}

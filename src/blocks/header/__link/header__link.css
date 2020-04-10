@@ -1,0 +1,10 @@
+@import url(./_type/header__link_type_active-dark.css);
+@import url(./_type/header__link_type_active-light.css);
+@import url(./_type/header__link_type_expect-dark.css);
+@import url(./_type/header__link_type_expect-light.css);
+
+.header__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}

@@ -1,0 +1,10 @@
+.news__find-text {
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #B6BCBF;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  right: 0;
+}

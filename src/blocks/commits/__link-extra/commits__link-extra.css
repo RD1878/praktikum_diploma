@@ -1,0 +1,14 @@
+.commits__link-extra {
+  display: none;
+  width: 288px;
+  height: 56px;
+  border: 1px solid #1A1B22;
+  box-sizing: border-box;
+  border-radius: 80px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 56px;
+  color: #1A1B22;
+  margin: auto;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Сервис для анализа происходящих в мире событий">
+  <meta name="author" content="Павел Хохлов">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NewsAnalyzer. Главная</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+  <link rel="icon" href="<%=require('./images/faviconka_ru_1119.png').default%>" type="image/x-icon" />
+  <link rel="shortcut icon" href="<%=require('./images/faviconka_ru_1119.png').default%>" type="image/x-icon" />
+</head>
+<body>
+  <div class="root">
+    <header class="header header_type_dark">
+      <div class="header__content">
+        <h4 class="headline header__logo header__logo_type_light">NewsAnalyzer</h4>
+        <nav class="header__nav">
+          <ul class="nav-list header__nav-list">
+            <li class="header__nav_item">
+              <a class="link header__link_type_active-light header__link" href="index.html">Главная</a>
+            <div class="header__link_underline header__link_underline_type_light"></div>
+            </li>
+            <li class="header__nav_item">
+              <a class="link header__link_type_expect-light header__link" href="about.html">О проекте</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="content">
+      <section class="lead">
+        <h1 class="headline lead__title">Что в мире<br>творится?</h1>
+        <p class="lead__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+        <div class="lead__search">
+          <form class="lead__form" name="search">
+            <input type="text" name="theme" required class="lead__input lead__input_type_theme" placeholder="Введите тему новости">
+        </form>
+        <button type="submit" class="button lead__button">Искать</button>
+        </div>
+      </section>
+      <section class="news">
+        <div class="news__find">
+          <i class="news__preloader circle-preloader"></i>
+          <p class="news__find-text">Идет поиск новостей...</p>
+        </div>
+        <div class="news__out">
+          <img class="news__out_image" alt="Не найдено" src="<%=require('./images/not-found_v1.png').default%>">
+          <h4 class="headline news__out_title">Ничего не найдено</h4>
+          <p class="news__out_subtitle">К сожалению по вашему запросу ничего не найдено.</p>
+        </div>
+        <div class="news__data api-block">
+          <div class="news__head api-block__head">
+            <h3 class="headline news__title api-block__title">Результаты поиска</h3>
+            <a class="link news__analytics api-block__link" href="analytics.html">
+              <p class="news__analytics_text api-block__link_text">Посмотреть аналитику</p>
+              <img class="news__analytics_image api-block__link_image" alt="Стрелка" src="<%=require('./images/Strelka.png').default%>">
+            </a>
+          </div>
+          <div class="news__container">
+            <div class="news__item">
+              <img class="news__item_image" alt="Image" src="<%=require('./images/image_08.png').default%>">
+              <div class="news__item_content">
+                <div class="news__item_content_info">
+                  <p class="date api-block__item_date news__item_date">2 августа, 2019</p>
+                  <h4 class="headline api-block__item_title news__item_title">Национальное достояние – парки</h4>
+                  <p class="api-block__item_text news__item_subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                </div>
+                <a class="link news__item_source" href="#">Лента</a>
+              </div>
+            </div>
+            <div class="news__item">
+              <img class="news__item_image" alt="Image" src="<%=require('./images/image_04.png').default%>">
+              <div class="news__item_content">
+                <div class="news__item_content_info">
+                  <p class="date api-block__item_date news__item_date">2 августа, 2019</p>
+                  <h4 class="headline api-block__item_title news__item_title">Лесные огоньки: история одной фотографии</h4>
+                  <p class="api-block__item_text news__item_subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                </div>
+                <a class="link news__item_source" href="#">Медуза</a>
+              </div>
+            </div>
+            <div class="news__item">
+              <img class="news__item_image" alt="Image" src="<%=require('./images/image_07.png').default%>">
+              <div class="news__item_content">
+                <div class="news__item_content_info">
+                  <p class="date api-block__item_date news__item_date">2 августа, 2019</p>
+                  <h4 class="headline api-block__item_title news__item_title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
+                  <p class="api-block__item_text news__item_subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                </div>
+                <a class="link news__item_source" href="#">РИА</a>
+              </div>
+            </div>
+          </div>
+          <div class="news__container">
+            <div class="news__item">
+              <img class="news__item_image" alt="Image" src="<%=require('./images/image_06.png').default%>">
+              <div class="news__item_content">
+                <div class="news__item_content_info">
+                  <p class="date api-block__item_date news__item_date">2 августа, 2019</p>
+                  <h4 class="headline api-block__item_title news__item_title">Национальное достояние – парки</h4>
+                  <p class="api-block__item_text news__item_subtitle">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                </div>
+                <a class="link news__item_source" href="#">Дзен</a>
+              </div>
+            </div>
+            <div class="news__item">
+              <img class="news__item_image" alt="Image" src="<%=require('./images/image_01.png').default%>">
+              <div class="news__item_content">
+                <div class="news__item_content_info">
+                  <p class="date api-block__item_date news__item_date">2 августа, 2019</p>
+                  <h4 class="headline api-block__item_title news__item_title">Лесные огоньки: история одной фотографии</h4>
+                  <p class="api-block__item_text news__item_subtitle">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                </div>
+                <a class="link news__item_source" href="#">Афиша</a>
+              </div>
+            </div>
+            <div class="news__item">
+              <img class="news__item_image" alt="Image" src="<%=require('./images/image_05.png').default%>">
+              <div class="news__item_content">
+                <div class="news__item_content_info">
+                  <p class="date api-block__item_date news__item_date">2 августа, 2019</p>
+                  <h4 class="headline api-block__item_title news__item_title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
+                  <p class="api-block__item_text news__item_subtitle">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                </div>
+                <a class="link news__item_source" href="#">Медиазона</a>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="button news__button news__button_active">Показать еще</button>
+        </div>
+      </section>
+      <section class="author">
+        <img class="author__photo" alt="Author Photo" src="<%=require('./images/image-03.png').default%>">
+        <div class="author__info">
+          <article class="author__info_article">
+            <h3 class="headline author__info_title">Об авторе</h3>
+            <p class="author__info_subtitle_paragraph">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+            <p class="author__info_subtitle_paragraph">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <span class="footer__logo">&copy; 2020. Хохлов Павел</span>
+      <div class="footer__content">
+        <nav class="footer__nav">
+          <ul class="nav-list footer__nav-list">
+            <li class="footer__nav_item"><a class="link footer__nav_link" href="index.html">Главная</a></li>
+            <li class="footer__nav_item"><a class="link footer__nav_link" href="about.html">О проекте</a></li>
+            <li class="footer__nav_item"><a class="link footer__nav_link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a></li>
+          </ul>
+        </nav>
+        <div class="footer__links">
+          <a href="https://github.com/RD1878" class="link footer__links_item"><img src="<%=require('./images/gh.png').default%>" alt="github" class="footer__links_image"></a>
+          <a href="https://www.facebook.com/profile.php?id=100001548766863" class="link footer__links_item"><img src="<%=require('./images/fb.png').default%>" alt="facebook" class="footer__links_image"></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>
