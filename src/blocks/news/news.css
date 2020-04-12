@@ -2,6 +2,7 @@
 @import url(./__analytics_image/news__analytics_image.css);
 @import url(./__analytics_text/news__analytics_text.css);
 @import url(./__button/news__button.css);
+@import url(./__block/news__block.css);
 @import url(./__container/news__container.css);
 @import url(./__data/news__data.css);
 @import url(./__find-text/news__find-text.css);
@@ -39,7 +40,13 @@
     padding-bottom: 32px;
   }
 
-  .news__container {
+  /*.news__container {
+    margin-bottom: 8px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }*/
+
+   .news__block {
     margin-bottom: 8px;
     margin-left: 40px;
     margin-right: 40px;
@@ -96,12 +103,19 @@
     margin-top: 16px;
   }
 
-  .news__container {
+  .news__block {
     margin-bottom: 0;
     margin-left: 16px;
     margin-right: 16px;
     flex-direction: column;
   }
+
+  /*.news__container {
+    margin-bottom: 0;
+    margin-left: 16px;
+    margin-right: 16px;
+    flex-direction: column;
+  }*/
 
   .news__item {
     width: auto;

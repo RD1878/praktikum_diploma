@@ -1,4 +1,4 @@
-export const timeInterval = (daysAgo) => {
+const timeInterval = (daysAgo) => {
   const now = new Date();
   const from = Date.parse(now);
   const to = from - daysAgo * 86400000;
@@ -9,3 +9,9 @@ export const timeInterval = (daysAgo) => {
     to: `${dateTo.getFullYear()}-${String(dateTo.getMonth() + 1).padStart(2, "0")}-${String(dateTo.getDate()).padStart(2, "0")}`
   }
 };
+
+const newsArrayHandler = (array) => {
+
+}
+
+export { timeInterval, }

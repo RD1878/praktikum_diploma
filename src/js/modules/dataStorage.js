@@ -4,14 +4,16 @@ export default class DataStorage {
   }
 
   setData() {
+    //localStorage.clear();
     this.options.news.getNews().then((data) => {
       //console.log(data);
       localStorage.setItem("storage", JSON.stringify(data.articles));
+      console.log('1');
     });
   }
 
   getData() {
-    //console.log(JSON.parse(localStorage.getItem("storage")));
-    return JSON.parse(localStorage.getItem("storage"));
+      const arr = JSON.parse(localStorage.getItem("storage"));
+      return arr;
   }
 }

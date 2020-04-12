@@ -5,12 +5,22 @@ import NewsApi from './js/modules/newsApi';
 import DataStorage from './js/modules/dataStorage';
 import NewsCard from './js/components/newsCard';
 import NewsCardList from './js/components/newsCardList';
-import { formSearch, themeInput, apiKey, pageSize, from, to, newsContainer } from './js/constants/constants';
+import SearchInput from './js/components/searchInput';
+import { formSearch,
+         themeInput,
+         apiKey,
+         pageSize,
+         from,
+         to,
+         newsContainer,
+         searchContainer,
+         newsButton,
+         newsData } from './js/constants/constants';
 
 
-//ОПРЕДЕЛЕНИЕ КОНСТАНТ С КЛАССАМИ
+//ОПРЕДЕЛЕНИЕ ЭКЗЕМПЛЯРОВ КЛАССОВ
 /*******************************/
-//Создание News
+//Создание экзкмпляра класса новостей
 const news = new NewsApi({
   themeInput: themeInput,
   apiKey: apiKey,
@@ -19,23 +29,28 @@ const news = new NewsApi({
   pageSize: pageSize
 });
 
-
-//Создание локального хранилища
+//Создание экзкмпляра класса локального хранилища
 const dataStorage = new DataStorage({
   news: news
 });
 
-//Создание карточки
+//Создание экземпляра класса карточки
 const newsCard = new NewsCard();
 
-//Создание списка карточек
+//Создание экземпляра класса списка карточек
 const newsCardList = new NewsCardList({
-  dataStorage: dataStorage,
-  newsCard: newsCard,
   newsContainer: newsContainer
 });
 
-
+//создание экземпляра класса поискового запроса
+const searchInput = new SearchInput({
+  //news: news,
+  newsCard: newsCard,
+  newsCardList: newsCardList,
+  dataStorage: dataStorage,
+  themeInput: themeInput,
+  //newsContainer: newsContainer
+});
 
 
 
@@ -43,9 +58,14 @@ const newsCardList = new NewsCardList({
 /*********/
 //Отправка запроса темы новости
 formSearch.addEventListener('submit', function(event) {
+  //debugger
   event.preventDefault();
-  dataStorage.setData();
-  newsCardList.add(newsContainer);
+  searchInput.renderLoading(true, newsContainer, searchContainer, newsButton, newsData);
+  searchInput.load();
+  //dataStorage.setData();
+  //dataStorage.getData();
+  formSearch.reset();
+  searchInput.renderLoading(false, newsContainer, searchContainer, newsButton, newsData);
 });
 
 
