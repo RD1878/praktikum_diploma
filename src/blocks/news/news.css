@@ -5,6 +5,7 @@
 @import url(./__block/news__block.css);
 @import url(./__container/news__container.css);
 @import url(./__data/news__data.css);
+@import url(./__data_is-visible/news__data_is-visible.css);
 @import url(./__find-text/news__find-text.css);
 @import url(./__find/news__find.css);
 @import url(./__head/news__head.css);

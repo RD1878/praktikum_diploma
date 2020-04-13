@@ -10,8 +10,9 @@ const timeInterval = (daysAgo) => {
   }
 };
 
-const newsArrayHandler = (array) => {
+const renderNews = (container, block, card, array, i) => {
+  return (container.addNews(block, card.create(array[i])));
+};
 
-}
+export { timeInterval, renderNews };
 
-export { timeInterval, }

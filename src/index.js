@@ -1,11 +1,11 @@
 import './index.css';
 
-import { func } from './about/about';
 import NewsApi from './js/modules/newsApi';
 import DataStorage from './js/modules/dataStorage';
 import NewsCard from './js/components/newsCard';
 import NewsCardList from './js/components/newsCardList';
 import SearchInput from './js/components/searchInput';
+import { renderNews } from './js/utils/utils';
 import { formSearch,
          themeInput,
          apiKey,
@@ -44,31 +44,32 @@ const newsCardList = new NewsCardList({
 
 //создание экземпляра класса поискового запроса
 const searchInput = new SearchInput({
-  //news: news,
   newsCard: newsCard,
   newsCardList: newsCardList,
   dataStorage: dataStorage,
-  themeInput: themeInput,
-  //newsContainer: newsContainer
+  newsData: newsData,
+  newsContainer: newsContainer,
+  newsButton: newsButton,
+  //themeInput: themeInput,
+  renderNews: renderNews
 });
-
-
 
 //СЛУШАТЕЛИ
 /*********/
 //Отправка запроса темы новости
 formSearch.addEventListener('submit', function(event) {
-  //debugger
   event.preventDefault();
-  searchInput.renderLoading(true, newsContainer, searchContainer, newsButton, newsData);
-  searchInput.load();
-  //dataStorage.setData();
-  //dataStorage.getData();
+  searchInput.startLoad();
+  //searchInput.renderLoading(true, newsContainer, searchContainer, newsButton, newsData);
   formSearch.reset();
-  searchInput.renderLoading(false, newsContainer, searchContainer, newsButton, newsData);
+  //searchInput.renderLoading(false, newsContainer, searchContainer, newsButton, newsData);
+
+
+
 });
 
 
 
-func();
+
+
 

@@ -1,4 +1,4 @@
-export default class newsApi {
+export default class NewsApi {
   constructor(options) {
     this.options = options;
   }

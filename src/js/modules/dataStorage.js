@@ -3,17 +3,15 @@ export default class DataStorage {
     this.options = options;
   }
 
-  setData() {
-    //localStorage.clear();
-    this.options.news.getNews().then((data) => {
-      //console.log(data);
+  saveStorage() {
+    return this.options.news.getNews()
+    .then((data) => {
       localStorage.setItem("storage", JSON.stringify(data.articles));
-      console.log('1');
+      return JSON.parse(localStorage.getItem("storage"));
     });
   }
 
-  getData() {
-      const arr = JSON.parse(localStorage.getItem("storage"));
-      return arr;
+  getNewsArray() {
+    return JSON.parse(localStorage.getItem("storage"));
   }
 }

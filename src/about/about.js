@@ -3,8 +3,14 @@ import './about.css';
 import '../../node_modules/swiper/css/swiper.min.css';
 import Swiper from '../../node_modules/swiper/js/swiper';
 
-const func = () => {
-  var mySwiper = new Swiper ('.swiper-container', {
+import GithubApi from '../js/modules/githubApi'
+
+const githubApi = new GithubApi({
+
+})
+
+const createSwiper = () => {
+  const mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
     slidesPerView: 'auto',
     centeredSlides: true,
@@ -24,4 +30,4 @@ const func = () => {
   })
 };
 
-export { func };
+createSwiper();
