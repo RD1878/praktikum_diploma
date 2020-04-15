@@ -15,7 +15,9 @@ import { formSearch,
          newsContainer,
          searchContainer,
          newsButton,
-         newsData } from './js/constants/constants';
+         newsData,
+         newsFind,
+         newsOut } from './js/constants/constants';
 
 
 //ОПРЕДЕЛЕНИЕ ЭКЗЕМПЛЯРОВ КЛАССОВ
@@ -38,9 +40,7 @@ const dataStorage = new DataStorage({
 const newsCard = new NewsCard();
 
 //Создание экземпляра класса списка карточек
-const newsCardList = new NewsCardList({
-  newsContainer: newsContainer
-});
+const newsCardList = new NewsCardList();
 
 //создание экземпляра класса поискового запроса
 const searchInput = new SearchInput({
@@ -50,6 +50,8 @@ const searchInput = new SearchInput({
   newsData: newsData,
   newsContainer: newsContainer,
   newsButton: newsButton,
+  newsFind: newsFind,
+  newsOut: newsOut,
   //themeInput: themeInput,
   renderNews: renderNews
 });
@@ -63,9 +65,6 @@ formSearch.addEventListener('submit', function(event) {
   //searchInput.renderLoading(true, newsContainer, searchContainer, newsButton, newsData);
   formSearch.reset();
   //searchInput.renderLoading(false, newsContainer, searchContainer, newsButton, newsData);
-
-
-
 });
 
 

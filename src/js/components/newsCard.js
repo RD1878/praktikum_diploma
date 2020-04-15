@@ -9,7 +9,7 @@ export default class NewsCard {
                   <h4 class="headline api-block__item_title news__item_title">${element.title}</h4>
                   <p class="api-block__item_text news__item_subtitle">${element.description}</p>
                 </div>
-                <a class="link news__itemу_source" href="${element.url}">${element.source.name}</a>
+                <a class="link news__item_source" href="${element.url}">${element.source.name}</a>
               </div>
             </div>`
   }

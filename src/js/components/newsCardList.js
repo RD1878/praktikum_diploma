@@ -1,6 +1,6 @@
 export default class NewsCardList {
-  constructor(options) {
-    this.options = options;
+  constructor() {
+
   }
 
   createNewsContainer() {

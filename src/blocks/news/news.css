@@ -8,6 +8,7 @@
 @import url(./__data_is-visible/news__data_is-visible.css);
 @import url(./__find-text/news__find-text.css);
 @import url(./__find/news__find.css);
+@import url(./__find_is-visible/news__find_is-visible.css);
 @import url(./__head/news__head.css);
 @import url(./__item_date/news__item_date.css);
 @import url(./__item_image/news__item_image.css);
@@ -18,6 +19,7 @@
 @import url(./__out_subtitle/news__out_subtitle.css);
 @import url(./__out_title/news__out_title.css);
 @import url(./__out/news__out.css);
+@import url(./__out_is-visible/news__out_is-visible.css);
 @import url(./__preloader/news__preloader.css);
 @import url(./__title/news__title.css);
 @import url(./__item_subtitle/news__item_subtitle.css);

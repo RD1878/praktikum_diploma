@@ -1,33 +1,50 @@
 import './about.css';
 
 import '../../node_modules/swiper/css/swiper.min.css';
-import Swiper from '../../node_modules/swiper/js/swiper';
+import Swiper from 'swiper';
 
-import GithubApi from '../js/modules/githubApi'
-
-const githubApi = new GithubApi({
-
-})
-
-const createSwiper = () => {
+//Функция инициализации слайдера
+const initSwiper = () => {
   const mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
+    //Опции
     slidesPerView: 'auto',
     centeredSlides: true,
     direction: 'horizontal',
     loop: true,
     simulateTouch: true,
     spaceBetween: 16,
+    //Пагинация
     pagination: {
       el: '.commits__pagination',
       dynamicBullets: true,
     },
-    // Navigation arrows
+    //Кнопки навигации
     navigation: {
       nextEl: '.commits__button_type_right',
       prevEl: '.commits__button_type_left',
     }
-  })
+  });
 };
 
-createSwiper();
+
+import GithubApi from '../js/modules/githubApi';
+import CommitsCardList from '../js/components/commitCardList';
+import CommitCard from '../js/components/commitCard';
+
+//ОПРЕДЕЛЕНИЕ ЭКЗЕМПЛЯРОВ КЛАССОВ
+/*******************************/
+//Создание экземпляпра класса API
+const githubApi = new GithubApi();
+//Создание экземпляра карточки с коммитом
+const commitCard = new CommitCard();
+//Создание экземпляра списка коммитов
+const commitsCardList = new CommitsCardList({
+  commitCard: commitCard,
+  githubApi: githubApi,
+  initSwiper: initSwiper
+});
+
+//Функции
+/*******************************/
+//Функция рендеренга коммитов
+commitsCardList.renderCommits();

@@ -7,7 +7,7 @@
   <meta name="author" content="Павел Хохлов">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NewsAnalyzer. Аналитика событий за неделю</title>
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
   <link rel="icon" href="<%=require('../images/faviconka_ru_1119.png').default%>" type="image/x-icon" />
   <link rel="shortcut icon" href="<%=require('../images/faviconka_ru_1119.png').default%>" type="image/x-icon" />
 </head>
@@ -114,6 +114,6 @@
       </div>
     </footer>
   </div>
-  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
 </body>
 </html>

@@ -4,18 +4,17 @@ export default class GithubApi {
   }
 
   //Получение коммитов от Github
-  getNews() {
-    return (fetch(`http://newsapi.org/v2/everything?` +
-                  `q=${this.options.themeInput.value}&` +
-                  `from=${this.options.from}&` +
-                  `to=${this.options.to}&` +
-                  `sortBy=popularity&` +
-                  `apiKey=${this.options.apiKey}&` +
-                  `pageSize=${this.options.pageSize}`)
-    .then((res) => {
+  getCommits() {
+    return (fetch(`https://api.github.com/repos/RD1878/praktikum_diploma/commits?sha=master`, {
+      method: 'GET',
+      headers: {
+          authorization: 'OAUTH-TOKEN'
+      }
+  })
+  .then((res) => {
       return res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
-    })
-    .catch((err) => console.log(err))
-    );
+  })
+  .catch((err) => console.log(err))
+  );
   }
 }
