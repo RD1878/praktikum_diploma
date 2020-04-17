@@ -12,7 +12,7 @@ export default class SearchInput {
     }
   }
 
-  startLoad() {
+  renderStartNews() {
     this.options.newsOut.classList.remove('news__out_is-visible');//отключение блока "ничего не найдено"
     this.options.newsData.classList.remove('news__data_is-visible');//скрытие найденных предыдущих новостей
     this.options.newsButton.classList.remove('news__button_is-invisible');//включение кнопки доп новостей
@@ -24,7 +24,7 @@ export default class SearchInput {
     //включение прелоудера
     this.renderLoading(true, this.options.newsFind);
     //запись новостей в локальное хранилище с дальнейшими действиями
-    this.options.dataStorage.saveStorage()
+    this.options.dataStorage.saveStorage(this.options.themeInput)
     .then((data) => {
       //console.log(data);
       //console.log(this.options.dataStorage.getNewsArray());
@@ -45,24 +45,6 @@ export default class SearchInput {
         if(data.length <= 3) {
           this.options.newsButton.classList.add('news__button_is-invisible');//скрытие кнопки с доп новостями
         }
-        let countNews = 3;//начальный счетчик порядкового номера новости
-        //слушатель на кнопку по доп новостям
-        this.options.newsButton.addEventListener('click', (event) => {
-          const newsAddBlock = this.options.newsCardList.createNewsContainer();//следующий блок с допновостями
-          this.options.newsContainer.appendChild(newsAddBlock);//добавление блока к контейнеру
-          //цикл добавления новых новостей в блок
-          for (let i = countNews; i < countNews + 3 && i <= data.length; i += 1) {
-            //если количество оставшихся новостей меньше чем хранилище, то...
-            if (i === data.length - 1) {
-              this.options.renderNews(this.options.newsCardList, newsAddBlock, this.options.newsCard, data, i);
-              this.options.newsButton.classList.add('news__button_is-invisible');
-              break;
-            }
-            //рендеринг следующих новостей
-            this.options.renderNews(this.options.newsCardList, newsAddBlock, this.options.newsCard, data, i);
-          };
-          countNews += 3;//изменение счетчика на следующие 3 новости
-        });
       }
     });
   }

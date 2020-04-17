@@ -1,3 +1,6 @@
+@import url('./_type/num-span_type_headlines.css');
+@import url('./_type/num-span_type_news.css');
+
 .num-span {
   font-weight: bold;
 }

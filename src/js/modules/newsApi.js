@@ -4,12 +4,12 @@ export default class NewsApi {
   }
 
   //Получение новостей от NewsAPI
-  getNews() {
+  getNews(themeInput) {
     return (fetch(`http://newsapi.org/v2/everything?` +
-                  `q=${this.options.themeInput.value}&` +
+                  `q=${themeInput.value}&` +
                   `from=${this.options.from}&` +
                   `to=${this.options.to}&` +
-                  `sortBy=popularity&` +
+                  `sortBy=publishedAt&` +
                   `apiKey=${this.options.apiKey}&` +
                   `pageSize=${this.options.pageSize}`)
     .then((res) => {

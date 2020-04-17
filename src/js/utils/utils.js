@@ -1,18 +1,53 @@
-const timeInterval = (daysAgo) => {
-  const now = new Date();
-  const from = Date.parse(now);
-  const to = from - daysAgo * 86400000;
-  const dateFrom = new Date(from);
-  const dateTo = new Date(to);
+//Количество миллисекунд в сутках
+const msPerDay = 86400000;
+
+const weekInterval = () => {
+  const now = new Date();//Дата в данный момент
+  const end = Date.parse(now);//Дата в данный момент в миллисекундах
   return {
-    from: `${dateFrom.getFullYear()}-${String(dateFrom.getMonth() + 1).padStart(2, "0")}-${String(dateFrom.getDate()).padStart(2, "0")}`,
-    to: `${dateTo.getFullYear()}-${String(dateTo.getMonth() + 1).padStart(2, "0")}-${String(dateTo.getDate()).padStart(2, "0")}`
+    end: end,//Конечный момент в миллисекундах
+    begin: end - (6 * msPerDay)//Начальный момент в миллисекундах
+  };
+};
+
+//Функция для определения интервальных дат
+const getBoundaryDays = (end, begin) => {
+  const dateEnd = new Date(end);
+  const dateBegin = new Date(begin);
+  return {
+    from: `${dateEnd.getFullYear()}-${String(dateEnd.getMonth() + 1).padStart(2, "0")}-${String(dateEnd.getDate()).padStart(2, "0")}`,
+    to: `${dateBegin.getFullYear()}-${String(dateBegin.getMonth() + 1).padStart(2, "0")}-${String(dateBegin.getDate()).padStart(2, "0")}`
   }
 };
 
-const renderNews = (container, block, card, array, i) => {
-  return (container.addNews(block, card.create(array[i])));
+//Функция для определения дат и дней недели интервала
+const getDaysForAnalytics = (begin) => {
+  const daysArray = [];
+  const weekDays = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+
+  for (let ms = begin; ms < begin + (7 * msPerDay); ms += msPerDay) {
+    daysArray.push({
+      day: (new Date(ms)).getDate(),
+      weekDay: weekDays[(new Date(ms)).getDay()]
+    });
+  }
+  return daysArray;
 };
 
-export { timeInterval, renderNews };
+const getMonth = (end, begin) => {
+  const months = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
+  return new Date(end).getMonth() === new Date(begin).getMonth() ?
+    `${months[new Date(begin).getMonth()]}` : `${months[new Date(begin).getMonth()]}-${months[new Date(end).getMonth()]}`;
+};
 
+
+//Переменная интервала с граничными датами
+export const interval = getBoundaryDays(weekInterval().end, weekInterval().begin);
+//Переменная с днями и днями недели интервала
+export const days = getDaysForAnalytics(weekInterval().begin);
+
+export const month = getMonth(weekInterval().end, weekInterval().begin);
+
+export const renderNews = (container, block, card, array, i) => {
+  return (container.addNews(block, card.create(array[i])));
+};
