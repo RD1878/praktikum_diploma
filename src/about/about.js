@@ -1,7 +1,18 @@
 import './about.css';
 
+//Импорт библиотеки слайдера Swiper
 import '../../node_modules/swiper/css/swiper.min.css';
 import Swiper from 'swiper';
+
+//Импорт утилит
+import {
+  getFormattedDate
+} from '../js/utils/utils';
+
+//Импорт классов
+import GithubApi from '../js/modules/githubApi';
+import CommitsCardList from '../js/components/commitCardList';
+import CommitCard from '../js/components/commitCard';
 
 //Функция инициализации слайдера
 const initSwiper = () => {
@@ -26,17 +37,14 @@ const initSwiper = () => {
   });
 };
 
-
-import GithubApi from '../js/modules/githubApi';
-import CommitsCardList from '../js/components/commitCardList';
-import CommitCard from '../js/components/commitCard';
-
 //ОПРЕДЕЛЕНИЕ ЭКЗЕМПЛЯРОВ КЛАССОВ
 /*******************************/
 //Создание экземпляпра класса API
 const githubApi = new GithubApi();
 //Создание экземпляра карточки с коммитом
-const commitCard = new CommitCard();
+const commitCard = new CommitCard({
+  getFormattedDate: getFormattedDate
+});
 //Создание экземпляра списка коммитов
 const commitsCardList = new CommitsCardList({
   commitCard: commitCard,

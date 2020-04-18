@@ -1,16 +1,13 @@
 export default class NewsCardList {
-  constructor() {
-
-  }
-
+  //Метод создания контейнера из трех новостей
   createNewsContainer() {
     const newsBlock = document.createElement('div');
     newsBlock.classList.add('news__block');
     return newsBlock;
   }
 
+  //Добавление новости в контейнер
   addNews(container, card) {
-    //console.log(this.newsContainer, card);
     container.insertAdjacentHTML('beforeend', card);
   }
 }

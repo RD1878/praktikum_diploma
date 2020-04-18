@@ -1,4 +1,11 @@
 .news__item_title {
   margin-top: 12px;
   margin-bottom: 16px;
+  color: #1A1B22;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

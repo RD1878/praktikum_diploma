@@ -1,7 +1,6 @@
 import './analytics.css';
 
-import Statistics from '../js/components/statistics';
-
+//Импорт констант
 import {
   keyword,
   newsArray,
@@ -9,36 +8,53 @@ import {
   countNews,
   countMentionsHeadlines,
   graphDays,
-  graphMonth
+  graphMonth,
+  graphNums,
+  graphLines
 } from '../js/constants/analyticsConstants.js';
 
+//Импорт утилит
 import {
-  interval,
   days,
-  month
+  month,
+  getCountMentionsTitles,
+  getCountMentionsPerDay,
+  getMaxOfArray
 } from '../js/utils/utils';
 
-console.log(keyword);
-console.log(newsArray);
+//Импорт классов
+import Statistics from '../js/components/statistics';
 
+//ОПРЕДЕЛЕНИЕ ПЕРЕМЕННЫХ
+/*******************************/
+//Переменная упоминаний каждый день в течении 7 дней
+const countMentionsPerDay = getCountMentionsPerDay(newsArray, keyword);
+//Максимальное число упоминаний в один из дней
+const maxCountMentions = getMaxOfArray(countMentionsPerDay);
+
+//ОПРЕДЕЛЕНИЕ ЭКЗЕМПЛЯРОВ КЛАССОВ
+/*******************************/
+//Создание экземпляра класса статистики
 const statistics = new Statistics({
   days: days,
   graphDays: graphDays,
   month: month,
-  graphMonth: graphMonth
-})
+  graphMonth: graphMonth,
+  graphNums: graphNums,
+  graphLines: graphLines,
+  countMentionsPerDay: countMentionsPerDay
+});
 
-const countMentions = (array, word) => {
-  let result = 0;
-  array.forEach((element) => {
-    element.title.toLowerCase().includes(word.toLowerCase()) ? result += 1 : result;
-  });
-  return result;
-}
+/*console.log(maxCountMentions);
+console.log(keyword);
+console.log(newsArray);
+console.log(countMentionsPerDay);*/
 
+//Вызов функции отрисовки страницы
 (function() {
-  queryString.textContent = `Вы спросили: "${keyword}"`;
-  countNews.textContent = `${newsArray.length}`;
-  countMentionsHeadlines.textContent = `${countMentions(newsArray, keyword)}`;
-  statistics.renderGraph();
+  queryString.textContent = `Вы спросили: "${keyword}"`;//Вставка ключевого слова
+  countNews.textContent = `${newsArray.length}`;//Количество найденных новостей
+  countMentionsHeadlines.textContent = `${getCountMentionsTitles(newsArray, keyword)}`;//Количество упоминаний ключевого слова в заголовках
+  statistics.renderGraphDays();//отрисовка шкалы дней
+  statistics.renderGraphBars();//отрисовка баров
 }());

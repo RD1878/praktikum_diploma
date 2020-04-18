@@ -9,7 +9,7 @@ export default class CommitCardList {
     commitsContainer.insertAdjacentHTML('afterbegin', card);
   }
 
-  //Метод рендеринг коммитов
+  //Метод рендеринга коммитов
   renderCommits() {
     this.options.githubApi.getCommits().then((commits) => {
       commits.forEach((commit) => {

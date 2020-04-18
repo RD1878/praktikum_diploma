@@ -14,6 +14,8 @@
 @import url(./__item_image/news__item_image.css);
 @import url(./__item_source/news__item_source.css);
 @import url(./__item_title/news__item_title.css);
+@import url(./__item_link/news__item_link.css);
+@import url(./__item_image-container/news__item_image-container.css);
 @import url(./__item/news__item.css);
 @import url(./__out_image/news__out_image.css);
 @import url(./__out_subtitle/news__out_subtitle.css);
@@ -80,7 +82,11 @@
   }
 
   .news__item_source {
-    bottom: 6px;
+    bottom: 20px;
+  }
+
+  .news__item_image-container {
+    height: 150px;
   }
 
   .news__button {
@@ -123,7 +129,7 @@
   .news__item {
     width: auto;
     max-width: 100%;
-    min-height: auto;
+    min-height: 446px;
     margin-right: 0;
     margin-bottom: 8px;
   }
@@ -133,11 +139,11 @@
   }
 
   .news__item_subtitle {
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
   }
 
   .news__item_source {
-    bottom: 6px;
+    bottom: 16px;
   }
 
   .news__item_title {
@@ -148,6 +154,10 @@
   .news__button {
     margin: 13px auto 0 auto;
     height: 56px;
+  }
+
+  .news__item_image-container {
+    height: 196px;
   }
 }
 

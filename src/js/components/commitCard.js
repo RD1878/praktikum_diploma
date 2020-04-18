@@ -1,10 +1,12 @@
 export default class CommitCard {
-
+  constructor(options) {
+    this.options = options;
+  }
   //Метод создания комиита
   create(element) {
     return `
       <div class="commits__slide swiper-slide">
-        <p class="api-block__item_date commits__date">${element.commit.committer.date}</p>
+        <p class="api-block__item_date commits__date">${this.options.getFormattedDate(element.commit.committer.date)}</p>
         <div class="commits__author">
           <img class="commits__author_photo" alt="Photo" src="${element.author.avatar_url}">
           <div class="commits__author_data">

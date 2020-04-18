@@ -3,6 +3,8 @@ export default class DataStorage {
     this.options = options;
   }
 
+  //Метод записи полученных новостей и ключевого слова в локальное хранилище
+  //с промисом для дальнейшего использования
   saveStorage(themeInput) {
     //Запись в локальное хранилище ключевого слова
     localStorage.setItem("keyword", JSON.stringify(themeInput.value));
@@ -14,6 +16,7 @@ export default class DataStorage {
     });
   }
 
+  //Метод получения новостей из локального хранилища
   getNewsArray() {
     return JSON.parse(localStorage.getItem("storage"));
   }

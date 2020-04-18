@@ -1,23 +1,26 @@
 import './index.css';
 
+//Импорт классов
 import NewsApi from './js/modules/newsApi';
 import DataStorage from './js/modules/dataStorage';
 import NewsCard from './js/components/newsCard';
 import NewsCardList from './js/components/newsCardList';
 import SearchInput from './js/components/searchInput';
+
+//Импорт утилит
 import {
   renderNews,
-  interval
+  interval,
+  getFormattedDate
 } from './js/utils/utils';
+
+//импорт констант
 import {
   formSearch,
   themeInput,
   apiKey,
   pageSize,
-  //from,
-  //to,
   newsContainer,
-  //searchContainer,
   newsButton,
   newsData,
   newsFind,
@@ -40,7 +43,9 @@ const dataStorage = new DataStorage({
 });
 
 //Создание экземпляра класса карточки
-const newsCard = new NewsCard();
+const newsCard = new NewsCard({
+  getFormattedDate: getFormattedDate
+});
 
 //Создание экземпляра класса списка карточек
 const newsCardList = new NewsCardList();
@@ -67,6 +72,7 @@ formSearch.addEventListener('submit', (event) => {
   searchInput.renderStartNews();
   formSearch.reset();
 });
+
 //начальный счетчик порядкового номера новости
 let countNews = 3;
 //слушатель на кнопку по доп новостям
