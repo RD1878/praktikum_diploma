@@ -1,3 +1,5 @@
+@import url(./_type/lead__button_type_active.css);
+
 .lead__button {
   width: 168px;
   height: 64px;
@@ -7,19 +9,9 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  color: #FFF;
 
-  background-color: #2F71E5;
   box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
   border-radius: 100px;
   border: 0;
   cursor: url(../../../images/lapka.png), pointer;
-}
-
-.lead__button:hover {
-  background-color: #347EFF;
-}
-
-.lead__button:active {
-  background-color: #2A65CC;
 }

@@ -1,0 +1,8 @@
+.news__error-text {
+  font-size: 28px;
+  line-height: 40px;
+  text-align: center;
+  color: #B6BCBF;
+  position: absolute;
+  top: 35%;
+}

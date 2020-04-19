@@ -45,10 +45,10 @@ const statistics = new Statistics({
   countMentionsPerDay: countMentionsPerDay
 });
 
-/*console.log(maxCountMentions);
+console.log(maxCountMentions);
 console.log(keyword);
 console.log(newsArray);
-console.log(countMentionsPerDay);*/
+console.log(countMentionsPerDay);
 
 //Вызов функции отрисовки страницы
 (function() {

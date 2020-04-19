@@ -13,7 +13,8 @@ export default class DataStorage {
     .then((data) => {
       localStorage.setItem("storage", JSON.stringify(data.articles));
       return JSON.parse(localStorage.getItem("storage"));
-    });
+    })
+    .catch((err) => console.log(err));
   }
 
   //Метод получения новостей из локального хранилища

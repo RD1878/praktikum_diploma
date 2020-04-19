@@ -24,7 +24,11 @@ import {
   newsButton,
   newsData,
   newsFind,
-  newsOut
+  newsOut,
+  validationWords,
+  errorMessage,
+  searchButton,
+  newsError
 } from './js/constants/indexConstants';
 
 //ОПРЕДЕЛЕНИЕ ЭКЗЕМПЛЯРОВ КЛАССОВ
@@ -34,7 +38,8 @@ const news = new NewsApi({
   apiKey: apiKey,
   from: interval.from,
   to: interval.to,
-  pageSize: pageSize
+  pageSize: pageSize,
+  newsError: newsError
 });
 
 //Создание экзкмпляра класса локального хранилища
@@ -61,36 +66,49 @@ const searchInput = new SearchInput({
   newsFind: newsFind,
   newsOut: newsOut,
   themeInput: themeInput,
+  validationWords: validationWords,
+  searchButton: searchButton,
+  errorMessage: errorMessage,
+  formSearch: formSearch,
+  newsError: newsError,
   renderNews: renderNews
 });
 
+
+
 //СЛУШАТЕЛИ
 /*********/
+//Счетчик порядкового номера новости в случае найденных более трех
+let countNews;
+
+//Установка слушателей на форму ввода новости
+searchInput.setEventListeners();
+
 //Отправка запроса темы новости
 formSearch.addEventListener('submit', (event) => {
+  countNews = 3;
   event.preventDefault();
   searchInput.renderStartNews();
   formSearch.reset();
 });
 
-//начальный счетчик порядкового номера новости
-let countNews = 3;
-//слушатель на кнопку по доп новостям
+//Слушатель на кнопку по доп новостям
 newsButton.addEventListener('click', () => {
-  //НЕ РАБОТАЕТ const newsArray = dataStorage.getNewsArray();
-  //console.log(newsArray);
+  const newsArray = dataStorage.getNewsArray();//массив новостей
   const newsAddBlock = newsCardList.createNewsContainer();//следующий блок с допновостями
   newsContainer.appendChild(newsAddBlock);//добавление блока к контейнеру
   //цикл добавления новых новостей в блок
-  for (let i = countNews; i < countNews + 3 && i <= dataStorage.getNewsArray().length; i += 1) {
+  for (let i = countNews; i < countNews + 3 && i <= newsArray.length; i += 1) {
     //если количество оставшихся новостей меньше чем хранилище, то...
-    if (i === dataStorage.getNewsArray().length - 1) {
-      renderNews(newsCardList, newsAddBlock, newsCard, dataStorage.getNewsArray(), i);
+    if (i === newsArray.length - 1) {
+      newsArray[i].urlToImage === null ? newsArray[i].urlToImage = "../../images/faviconka_ru_1119.png" : newsArray[i].urlToImage;
+      renderNews(newsCardList, newsAddBlock, newsCard, newsArray, i);
       newsButton.classList.add('news__button_is-invisible');
       return;
     }
     //рендеринг следующих новостей
-    renderNews(newsCardList, newsAddBlock, newsCard, dataStorage.getNewsArray(), i);
+    newsArray[i].urlToImage === null ? newsArray[i].urlToImage = "../../images/faviconka_ru_1119.png" : newsArray[i].urlToImage;
+    renderNews(newsCardList, newsAddBlock, newsCard, newsArray, i);
   };
   countNews += 3;//изменение счетчика на следующие 3 новости
 });

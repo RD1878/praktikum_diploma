@@ -1,0 +1,12 @@
+.lead__button_type_active {
+  background-color: #2F71E5;
+  color: #FFF;
+}
+
+.lead__button_type_active:hover {
+  background-color: #347EFF;
+}
+
+.lead__button_type_active:active {
+  background-color: #2A65CC;
+}

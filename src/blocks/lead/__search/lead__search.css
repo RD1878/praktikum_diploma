@@ -1,12 +1,12 @@
 .lead__search {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   max-width: 608px;
-  max-height: 64px;
+
 
   position: absolute;
-  top: 76%;
+  top: 68%;
   left: 29%;
 
 }

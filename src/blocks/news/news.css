@@ -27,6 +27,9 @@
 @import url(./__item_subtitle/news__item_subtitle.css);
 @import url(./__item_content/news__item_content.css);
 @import url(./__item_content_info/news__item_content_info.css);
+@import url(./__error/news__error.css);
+@import url(./__error_is-visible/news__error_is-visible.css);
+@import url(./__error-text/news__error-text.css);
 
 
 .news {
@@ -44,12 +47,6 @@
   .news__head {
     padding-bottom: 32px;
   }
-
-  /*.news__container {
-    margin-bottom: 8px;
-    margin-left: 40px;
-    margin-right: 40px;
-  }*/
 
    .news__block {
     margin-bottom: 8px;
@@ -119,13 +116,6 @@
     flex-direction: column;
   }
 
-  /*.news__container {
-    margin-bottom: 0;
-    margin-left: 16px;
-    margin-right: 16px;
-    flex-direction: column;
-  }*/
-
   .news__item {
     width: auto;
     max-width: 100%;
@@ -158,6 +148,12 @@
 
   .news__item_image-container {
     height: 196px;
+  }
+
+  .news__error-text {
+    top: 25%;
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 
