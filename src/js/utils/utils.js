@@ -1,7 +1,7 @@
 //Количество миллисекунд в сутках
 const msPerDay = 86400000;
 
-//Функция определения интервала
+//Функция определения интервала времени
 const getWeekInterval = () => {
   const now = new Date();//Дата в данный момент
   const end = Date.parse(now);//Дата в данный момент в миллисекундах
@@ -79,6 +79,41 @@ export const getMaxOfArray = (numArray) => {
     maxNum > element ? maxNum : maxNum = element;
   })
   return maxNum;
+};
+
+//Функция вычисления максимального числа в шкале упоминаний
+export const getMaxScale = (maxCountMentions) => {
+  switch(true) {
+    case(maxCountMentions <= 8):
+      return 8;
+    case(maxCountMentions <= 20):
+      return 20;
+    case(maxCountMentions <= 40):
+      return 40;
+    case(maxCountMentions <= 80):
+      return 80;
+    case(maxCountMentions <= 100):
+      return 100;
+    case(maxCountMentions <= 200):
+      return 200;
+    case(maxCountMentions <= 300):
+      return 300;
+    case(maxCountMentions <= 400):
+      return 400;
+    case(maxCountMentions <= 500):
+      return 500;
+  };
+}
+
+//Функция подсчет промежуточных значений шкалы
+export const getScaleNums = (getMaxScale) => {
+  return {
+    one: 0,
+    two: getMaxScale / 4,
+    three: getMaxScale / 2,
+    four: (getMaxScale * 3) / 4,
+    five: getMaxScale
+  };
 };
 
 //Функция форматирования даты

@@ -10,7 +10,11 @@ import {
   graphDays,
   graphMonth,
   graphNums,
-  graphLines
+  graphLines,
+  graphScalesTwo,
+  graphScalesThree,
+  graphScalesFour,
+  graphScalesFive,
 } from '../js/constants/analyticsConstants.js';
 
 //Импорт утилит
@@ -19,7 +23,9 @@ import {
   month,
   getCountMentionsTitles,
   getCountMentionsPerDay,
-  getMaxOfArray
+  getMaxOfArray,
+  getScaleNums,
+  getMaxScale
 } from '../js/utils/utils';
 
 //Импорт классов
@@ -42,7 +48,14 @@ const statistics = new Statistics({
   graphMonth: graphMonth,
   graphNums: graphNums,
   graphLines: graphLines,
-  countMentionsPerDay: countMentionsPerDay
+  countMentionsPerDay: countMentionsPerDay,
+  maxCountMentions: maxCountMentions,
+  graphScalesTwo : graphScalesTwo,
+  graphScalesThree : graphScalesThree,
+  graphScalesFour : graphScalesFour,
+  graphScalesFive : graphScalesFive,
+  getScaleNums: getScaleNums,
+  getMaxScale: getMaxScale
 });
 
 console.log(maxCountMentions);

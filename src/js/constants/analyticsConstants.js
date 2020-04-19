@@ -10,3 +10,7 @@ export const graphDays = document.querySelectorAll('.analytics-graph__day');
 export const graphMonth = document.querySelector('.analytics-graph__subtitle_date');
 export const graphNums = document.querySelectorAll('.analytics-graph__bar-item_num');
 export const graphLines = document.querySelectorAll('.analytics-graph__bar-item_line');
+export const graphScalesTwo = document.querySelectorAll('.analytics-graph__scale-two');
+export const graphScalesThree = document.querySelectorAll('.analytics-graph__scale-three');
+export const graphScalesFour = document.querySelectorAll('.analytics-graph__scale-four');
+export const graphScalesFive = document.querySelectorAll('.analytics-graph__scale-five');
