@@ -10,11 +10,11 @@ export default class GithubApi {
       headers: {
           authorization: 'OAUTH-TOKEN'
       }
-  })
-  .then((res) => {
+    })
+    .then((res) => {
       return res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
-  })
-  .catch((err) => console.log(err))
-  );
+    })
+    .catch((err) => console.log(err))
+    );
   }
 }
