@@ -101,13 +101,13 @@ newsButton.addEventListener('click', () => {
   for (let i = countNews; i < countNews + 3 && i <= newsArray.length; i += 1) {
     //если количество оставшихся новостей меньше чем хранилище, то...
     if (i === newsArray.length - 1) {
-      newsArray[i].urlToImage === null ? newsArray[i].urlToImage = "../../images/faviconka_ru_1119.png" : newsArray[i].urlToImage;
+      newsArray[i].urlToImage === null ? newsArray[i].urlToImage = "./images/faviconka_ru_1119.png" : newsArray[i].urlToImage;
       renderNews(newsCardList, newsAddBlock, newsCard, newsArray, i);
       newsButton.classList.add('news__button_is-invisible');
       return;
     }
     //рендеринг следующих новостей
-    newsArray[i].urlToImage === null ? newsArray[i].urlToImage = "../../images/faviconka_ru_1119.png" : newsArray[i].urlToImage;
+    newsArray[i].urlToImage === null ? newsArray[i].urlToImage = "./images/faviconka_ru_1119.png" : newsArray[i].urlToImage;
     renderNews(newsCardList, newsAddBlock, newsCard, newsArray, i);
   };
   countNews += 3;//изменение счетчика на следующие 3 новости

@@ -66,7 +66,7 @@ export default class SearchInput {
         const len = data.length < 3 ? data.length : 3;//переменная для опредления длины массива новостей
         //рендеринг первых трех новостей
         for (let i = 0; i < len; i += 1) {
-          data[i].urlToImage === null ? data[i].urlToImage = "../../images/faviconka_ru_1119.png" : data[i].urlToImage;
+          data[i].urlToImage === null ? data[i].urlToImage = "./images/faviconka_ru_1119.png" : data[i].urlToImage;
           this.options.renderNews(this.options.newsCardList, newsBlock, this.options.newsCard, data, i);
           this._setSubmitButtonState(this.options.formSearch, this.options.searchButton);
         };
