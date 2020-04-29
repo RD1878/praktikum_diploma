@@ -60,10 +60,11 @@ export default class SearchInput {
         this._renderLoading(false, this.options.newsFind);//отключение прелоудера
         this.options.newsOut.classList.add('news__out_is-visible');//включение блока "ничего не найдено"
       } else {
+        const maxCountNewsInBlock = 3;
         const newsBlock = this.options.newsCardList.createNewsContainer();//Создание первого блока новостей
         this.options.newsContainer.appendChild(newsBlock);//добавление первого блока в контейнер
         this._renderLoading(false, this.options.newsFind);//отключение прелоудера
-        const len = data.length < 3 ? data.length : 3;//переменная для опредления длины массива новостей
+        const len = data.length < maxCountNewsInBlock ? data.length : maxCountNewsInBlock;//переменная для опредления длины массива новостей
         //рендеринг первых трех новостей
         for (let i = 0; i < len; i += 1) {
           data[i].urlToImage === null ? data[i].urlToImage = "./images/faviconka_ru_1119.png" : data[i].urlToImage;
@@ -72,7 +73,7 @@ export default class SearchInput {
         };
         this.options.newsData.classList.add('news__data_is-visible');//показ первого блока новостей
         //Если новостей < 3 - дальнейшие действия
-        if(data.length <= 3) {
+        if(data.length <= maxCountNewsInBlock) {
           this.options.newsButton.classList.add('news__button_is-invisible');//скрытие кнопки с доп новостями
         }
       }
@@ -80,6 +81,7 @@ export default class SearchInput {
     .catch((err) => {
       this._renderLoading(false, this.options.newsFind);//выключение прелоудера
       this.options.newsError.classList.add('news__error_is-visible');//включение блока с ошибкой получения данных
+      console.log(`Ошибка ${err}`);
     });
   }
 

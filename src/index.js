@@ -74,26 +74,18 @@ const searchInput = new SearchInput({
   renderNews: renderNews
 });
 
-
-
-//СЛУШАТЕЛИ
+//ФУНКЦИИ
 /*********/
-//Счетчик порядкового номера новости в случае найденных более трех
-let countNews;
-
-//Установка слушателей на форму ввода новости
-searchInput.setEventListeners();
-
-//Отправка запроса темы новости
-formSearch.addEventListener('submit', (event) => {
+//Функция отрисовки первых трех новостей
+const handleKeyWord = (event) => {
   countNews = 3;
   event.preventDefault();
   searchInput.renderStartNews();
   formSearch.reset();
-});
+};
 
-//Слушатель на кнопку по доп новостям
-newsButton.addEventListener('click', () => {
+//Функция отрисовки дополнительных карточек
+const handleAddNews = () => {
   const newsArray = dataStorage.getNewsArray();//массив новостей
   const newsAddBlock = newsCardList.createNewsContainer();//следующий блок с допновостями
   newsContainer.appendChild(newsAddBlock);//добавление блока к контейнеру
@@ -111,4 +103,20 @@ newsButton.addEventListener('click', () => {
     renderNews(newsCardList, newsAddBlock, newsCard, newsArray, i);
   };
   countNews += 3;//изменение счетчика на следующие 3 новости
-});
+};
+
+//ПЕРЕМЕННЫЕ
+/*********/
+//Счетчик порядкового номера новости в случае найденных более трех
+let countNews;
+
+//СЛУШАТЕЛИ
+/*********/
+//Установка слушателей на форму ввода новости
+searchInput.setEventListeners();
+
+//Отправка запроса темы новости
+formSearch.addEventListener('submit', handleKeyWord);
+
+//Слушатель на кнопку по доп новостям
+newsButton.addEventListener('click', handleAddNews);

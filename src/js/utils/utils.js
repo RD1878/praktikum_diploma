@@ -5,9 +5,10 @@ const msPerDay = 86400000;
 const getWeekInterval = () => {
   const now = new Date();//Дата в данный момент
   const end = Date.parse(now);//Дата в данный момент в миллисекундах
+  const difCountDays = 6;
   return {
     end: end,//Конечный момент в миллисекундах
-    begin: end - (6 * msPerDay)//Начальный момент в миллисекундах
+    begin: end - (difCountDays * msPerDay)//Начальный момент в миллисекундах
   };
 };
 
@@ -25,8 +26,8 @@ const getBoundaryDays = (end, begin) => {
 const getDaysForAnalytics = (begin) => {
   const daysArray = [];
   const weekDays = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
-
-  for (let ms = begin; ms < begin + (7 * msPerDay); ms += msPerDay) {
+  const countWeekDays = 7;
+  for (let ms = begin; ms < begin + (countWeekDays * msPerDay); ms += msPerDay) {
     daysArray.push({
       day: (new Date(ms)).getDate(),
       weekDay: weekDays[(new Date(ms)).getDay()]

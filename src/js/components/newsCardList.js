@@ -8,6 +8,6 @@ export default class NewsCardList {
 
   //Добавление новости в контейнер
   addNews(container, card) {
-    container.insertAdjacentHTML('beforeend', card);
+    container.appendChild(card);
   }
 }

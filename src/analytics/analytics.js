@@ -58,11 +58,6 @@ const statistics = new Statistics({
   getMaxScale: getMaxScale
 });
 
-console.log(maxCountMentions);
-console.log(keyword);
-console.log(newsArray);
-console.log(countMentionsPerDay);
-
 //Вызов функции отрисовки страницы
 (function() {
   queryString.textContent = `Вы спросили: "${keyword}"`;//Вставка ключевого слова
