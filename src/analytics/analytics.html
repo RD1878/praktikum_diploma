@@ -7,7 +7,7 @@
   <meta name="author" content="Павел Хохлов">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NewsAnalyzer. Аналитика событий за неделю</title>
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
   <link rel="icon" href="<%=require('../images/faviconka_ru_1119.png').default%>" type="image/x-icon" />
   <link rel="shortcut icon" href="<%=require('../images/faviconka_ru_1119.png').default%>" type="image/x-icon" />
 </head>
@@ -32,16 +32,16 @@
     <main class="content">
       <section class="analytics-data">
         <p class="analytics-data__mark">Главная<span class="light-span">/ Аналитика</span></p>
-        <h3 class="headline analytics-data__title">Вы спросили: "Путешествия"</h3>
+        <h3 class="headline analytics-data__title"></h3>
         <ul class="list analytics-data__news">
-          <li class="analytics-data__news_item">Новостей за неделю: <span class="num-span">34 324</span></li>
-          <li class="analytics-data__news_item">Упоминаний в заголовках: <span class="num-span">235</span></li>
+          <li class="analytics-data__news_item">Новостей за неделю: <span class="num-span num-span_type_news"></span></li>
+          <li class="analytics-data__news_item">Упоминаний в заголовках: <span class="num-span num-span_type_headlines">235</span></li>
         </ul>
       </section>
       <section class="analytics-graph">
         <h4 class="headline analytics-graph__title">Аналитика по дням</h4>
         <div class="analytics-graph__subtitle">
-          <p class="analytics-graph__subtitle_date">Дата (август)</p>
+          <p class="analytics-graph__subtitle_date"></p>
           <p class="analytics-graph__subtitle_count">Количество упоминаний</p>
         </div>
         <div class="analytics-graph__scale analytics-graph__scale_type_top">
@@ -52,48 +52,48 @@
           <p class="analytics-graph__scale-num analytics-graph__scale-five">100</p>
         </div>
         <div class="analytics-graph__bar">
-          <p class="analytics-graph__day">19, пн</p>
+          <p class="analytics-graph__day"></p>
           <div class="analytics-graph__bar-item">
-            <p class="analytics-graph__bar-item_num">15</p>
+            <p class="analytics-graph__bar-item_num"></p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_one"></div>
           </div>
-          <p class="analytics-graph__day">20, вт</p>
+          <p class="analytics-graph__day"></p>
           <div class="analytics-graph__bar-item">
-            <p class="analytics-graph__bar-item_num">18</p>
+            <p class="analytics-graph__bar-item_num"></p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_two"></div>
           </div>
-          <p class="analytics-graph__day">21, ср</p>
+          <p class="analytics-graph__day"></p>
           <div class="analytics-graph__bar-item">
-            <p class="analytics-graph__bar-item_num">11</p>
+            <p class="analytics-graph__bar-item_num"></p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_three"></div>
           </div>
-          <p class="analytics-graph__day">22, чт</p>
+          <p class="analytics-graph__day"></p>
           <div class="analytics-graph__bar-item">
-            <p class="analytics-graph__bar-item_num">39</p>
+            <p class="analytics-graph__bar-item_num"></p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_four"></div>
           </div>
-          <p class="analytics-graph__day">23, пт</p>
+          <p class="analytics-graph__day"></p>
           <div class="analytics-graph__bar-item">
-            <p class="analytics-graph__bar-item_num">45</p>
+            <p class="analytics-graph__bar-item_num"></p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_five"></div>
           </div>
-          <p class="analytics-graph__day">24, сб</p>
+          <p class="analytics-graph__day"></p>
           <div class="analytics-graph__bar-item">
-            <p class="analytics-graph__bar-item_num">73</p>
+            <p class="analytics-graph__bar-item_num"></p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_six"></div>
           </div>
-          <p class="analytics-graph__day">25, вс</p>
+          <p class="analytics-graph__day"></p>
           <div class="analytics-graph__bar-item">
-            <p class="analytics-graph__bar-item_num">34</p>
+            <p class="analytics-graph__bar-item_num"></p>
             <div class="analytics-graph__bar-item_line analytics-graph__bar-item_line_seven"></div>
           </div>
         </div>
         <div class="analytics-graph__scale analytics-graph__scale_type_bottom">
           <p class="analytics-graph__scale-num analytics-graph__scale-one">0</p>
-          <p class="analytics-graph__scale-num analytics-graph__scale-two">25</p>
-          <p class="analytics-graph__scale-num analytics-graph__scale-three">50</p>
-          <p class="analytics-graph__scale-num analytics-graph__scale-four">75</p>
-          <p class="analytics-graph__scale-num analytics-graph__scale-five">100</p>
+          <p class="analytics-graph__scale-num analytics-graph__scale-two"></p>
+          <p class="analytics-graph__scale-num analytics-graph__scale-three"></p>
+          <p class="analytics-graph__scale-num analytics-graph__scale-four"></p>
+          <p class="analytics-graph__scale-num analytics-graph__scale-five"></p>
         </div>
       </section>
     </main>
@@ -114,6 +114,6 @@
       </div>
     </footer>
   </div>
-  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
 </body>
 </html>

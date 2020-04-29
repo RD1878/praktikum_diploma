@@ -1,9 +1,10 @@
 .news__container {
-  display: flex;
+  display: block;
+  /*display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 16px;
   margin-left: 104px;
-  margin-right: 104px;
+  margin-right: 104px;*/
 
 }

@@ -7,7 +7,10 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  entry: { main: './src/index.js'
+  entry: {
+    index: './src/index.js',
+    about: './src/about/about.js',
+    analytics: './src/analytics/analytics.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

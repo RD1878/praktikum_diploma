@@ -1,0 +1,8 @@
+.news__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+  margin-left: 104px;
+  margin-right: 104px;
+}

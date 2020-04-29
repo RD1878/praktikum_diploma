@@ -8,6 +8,7 @@
   border: 0;
   width: calc(100% - 216px);
   border-radius: 100px;
+  outline: none;
 
   font-family: 'Roboto';
   font-style: normal;

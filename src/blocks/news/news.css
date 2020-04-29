@@ -2,25 +2,34 @@
 @import url(./__analytics_image/news__analytics_image.css);
 @import url(./__analytics_text/news__analytics_text.css);
 @import url(./__button/news__button.css);
+@import url(./__block/news__block.css);
 @import url(./__container/news__container.css);
 @import url(./__data/news__data.css);
+@import url(./__data_is-visible/news__data_is-visible.css);
 @import url(./__find-text/news__find-text.css);
 @import url(./__find/news__find.css);
+@import url(./__find_is-visible/news__find_is-visible.css);
 @import url(./__head/news__head.css);
 @import url(./__item_date/news__item_date.css);
 @import url(./__item_image/news__item_image.css);
 @import url(./__item_source/news__item_source.css);
 @import url(./__item_title/news__item_title.css);
+@import url(./__item_link/news__item_link.css);
+@import url(./__item_image-container/news__item_image-container.css);
 @import url(./__item/news__item.css);
 @import url(./__out_image/news__out_image.css);
 @import url(./__out_subtitle/news__out_subtitle.css);
 @import url(./__out_title/news__out_title.css);
 @import url(./__out/news__out.css);
+@import url(./__out_is-visible/news__out_is-visible.css);
 @import url(./__preloader/news__preloader.css);
 @import url(./__title/news__title.css);
 @import url(./__item_subtitle/news__item_subtitle.css);
 @import url(./__item_content/news__item_content.css);
 @import url(./__item_content_info/news__item_content_info.css);
+@import url(./__error/news__error.css);
+@import url(./__error_is-visible/news__error_is-visible.css);
+@import url(./__error-text/news__error-text.css);
 
 
 .news {
@@ -39,7 +48,7 @@
     padding-bottom: 32px;
   }
 
-  .news__container {
+   .news__block {
     margin-bottom: 8px;
     margin-left: 40px;
     margin-right: 40px;
@@ -70,7 +79,11 @@
   }
 
   .news__item_source {
-    bottom: 6px;
+    bottom: 20px;
+  }
+
+  .news__item_image-container {
+    height: 150px;
   }
 
   .news__button {
@@ -96,7 +109,7 @@
     margin-top: 16px;
   }
 
-  .news__container {
+  .news__block {
     margin-bottom: 0;
     margin-left: 16px;
     margin-right: 16px;
@@ -106,7 +119,7 @@
   .news__item {
     width: auto;
     max-width: 100%;
-    min-height: auto;
+    min-height: 446px;
     margin-right: 0;
     margin-bottom: 8px;
   }
@@ -116,11 +129,11 @@
   }
 
   .news__item_subtitle {
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
   }
 
   .news__item_source {
-    bottom: 6px;
+    bottom: 16px;
   }
 
   .news__item_title {
@@ -131,6 +144,16 @@
   .news__button {
     margin: 13px auto 0 auto;
     height: 56px;
+  }
+
+  .news__item_image-container {
+    height: 196px;
+  }
+
+  .news__error-text {
+    top: 25%;
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 

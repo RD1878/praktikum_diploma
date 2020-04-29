@@ -4,7 +4,8 @@
 @import url(./__search/lead__search.css);
 @import url(./__subtitle/lead__subtitle.css);
 @import url(./__title/lead__title.css);
-/*@import url(./__image/lead__image.css);*/
+@import url(./__search_error-message/lead__search_error-message.css);
+@import url(./__search_error-container/lead__search_error-container.css);
 
 .lead {
   min-height: 576px;
@@ -39,13 +40,12 @@
 
   .lead__search {
     max-width: 448px;
-    max-height: 56px;
-    top: 296px;
+    top: 264px;
     left: 160px;
   }
 
   .lead__form {
-    height: 56px;
+    height: 58px;
     width: 448px;
   }
 
@@ -101,7 +101,7 @@
   }
 
   .lead__search {
-    top: 376px;
+    top: 330px;
     left: 16px;
     right: 16px;
     margin: auto;

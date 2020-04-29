@@ -1,6 +1,6 @@
 .news__data {
   padding-top: 80px;
   padding-bottom: 80px;
-  /*display: none;*/
-  display: flex;
+  display: none;
+  width: 100%;
 }
