@@ -5,7 +5,7 @@ export default class NewsApi {
 
   //Получение новостей от NewsAPI
   getNews(themeInput) {
-    return (fetch(`https://newsapi.org/v2/everything?` +
+    return (fetch(`https://nomoreparties.co/news/v2/everything?` +
                   `q=${themeInput.value}&` +
                   `from=${this.options.from}&` +
                   `to=${this.options.to}&` +
